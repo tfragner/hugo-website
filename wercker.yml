@@ -20,7 +20,7 @@ deploy:
   steps:
     - leipert/git-push@0.7.6:
         gh_oauth: $GIT_TOKEN
-	gh_pages: true
+        gh_pages: true
         basedir: public
         clean_removed_files: true
 
