@@ -103,12 +103,17 @@ To include a single tweet, pass the tweet’s ID from the tweet's URL as paramet
 
 ## $\rm \LaTeX$ math
 
-
 ```TeX
 $$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
 ```
 
 $$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+
+Alternatively, inline math can be written by wrapping the formula with only a single `$`:
+
+    This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+
+This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
 
 ## Table
 
