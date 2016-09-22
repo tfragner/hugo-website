@@ -11,7 +11,7 @@ build:
 
 deploy:
   steps:
-    - uetchy/gh-pages:
-        token: $GIT_TOKEN
-        path: public
-        repo: gcushen/hugo-academic-demo
+   - leipert/git-push:
+       gh_oauth: $GIT_TOKEN
+       branch: gh-pages
+       basedir: public
