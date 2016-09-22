@@ -1,11 +1,7 @@
-box: debian
+box: golang:1.5.1
 
 build:
   steps:
-    - script:
-        name: install git
-        code: |
-          apt-get update && apt-get install git -y
     - script:
         name: initialize git submodules
         code: |
@@ -18,3 +14,4 @@ deploy:
     - uetchy/gh-pages:
         token: $GIT_TOKEN
         path: public
+        repo: gcushen/hugo-academic-demo
