@@ -14,15 +14,16 @@ Key features:
 - Designed for academic staff, students, or general personal use
 - Includes Biography, Publications, Projects, News/Blog, Teaching, and Contact sections
 - Write in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
-- Academic linking (Scholar etc.), Google Analytics, and Disqus comments
+- Academic linking (Scholar etc.), [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
 - Easy to customize
+
 <!--more-->
 
 ## Installation
 
-1. Install [Hugo](https://gohugo.io/overview/installing/) and create a new website:
+1. [Install Hugo](https://georgecushen.com/create-your-website-with-hugo/#installing-hugo) and create a new website by typing the following commands in your *Terminal* or *Command Prompt* app:
 
         hugo new site my_website
         cd my_website
@@ -43,7 +44,9 @@ Key features:
 
     Now you can go to [localhost:1313](http://localhost:1313) and your new Academic themed website should appear.
 
-5. Customize your website (see next section), build it by running `hugo`, and deploy it by copying the `public/` directory (by FTP, Rsync, git push, etc.) to your production web server.
+5. Customize your website - refer to the *Getting Started* section below
+
+6. Build your site by running the `hugo` command. Then [host it for free using Github Pages](https://georgecushen.com/create-your-website-with-hugo/). Or alternatively, copy the generated `public/` directory (by FTP, Rsync, etc.) to your production web server (such as your university's hosting service).
 
 
 ## Getting Started
@@ -54,7 +57,7 @@ Assuming you created a new website with the example content following the instal
 
 The core parameters for the website can be edited in the `config.toml` configuration file:
 
-- Set `baseurl` to your website URL (we recommend [GitHub Pages](https://pages.github.com/) for free hosting)
+- Set `baseurl` to your website URL (we recommend [GitHub Pages](https://georgecushen.com/create-your-website-with-hugo/) for free hosting)
 - Set `title` to your desired website title such as your name
 - The example Disqus commenting variable should be cleared (e.g. `disqusShortname = ""`) or set to your own [Disqus](https://disqus.com/) shortname to enable commenting
 - Edit your details under `[params]`; these will be displayed mainly in the homepage *about* and *contact* widgets (if used). To disable a contact field, simply clear the value to `""`. 
@@ -119,7 +122,7 @@ Where `:slug` defaults to the filename of the post, excluding the file extension
 
 ## Upgrading
 
-Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) and monitor the commits for updates.
+Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) and monitor the [commits](https://github.com/gcushen/hugo-academic/commits/master) for updates.
 
 Before upgrading the theme, it is recommended to make a backup of your entire website directory, or at least your `themes/academic` directory. You can also read about the [most recent milestones](https://github.com/gcushen/hugo-academic/releases) (but this doesn't necessarily reflect the latest *master* release).
 
@@ -143,9 +146,11 @@ If you have modified files in `themes/academic`, git will attempt to auto-merge 
 If there are any issues after upgrading, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed.
 
 
-## Contributing
+## Feedback & Contributing
 
 Please use the [issue tracker](https://github.com/gcushen/hugo-academic/issues) to let me know about any bugs or feature requests, or alternatively make a pull request.
+
+For general questions about Hugo, there is a [Hugo discussion forum](http://discuss.gohugo.io).
 
 
 ## License
