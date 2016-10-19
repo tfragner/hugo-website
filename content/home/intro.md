@@ -33,10 +33,9 @@ If you like the theme, [_star_ it on Github](https://github.com/gcushen/hugo-aca
 Key features:
 
 - Designed for personal and academic staff/student use
-- Includes Biography, Publications, Projects, News/Blog, Teaching, and Contact widgets
+- Customizable Biography, Publications, Projects, News/Blog, Teaching, and Contact widgets
 - Write in [Markdown](./post/writing-markdown-latex/) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Academic linking (Scholar etc.), [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Mobile and tablet friendly
 - Simple and refreshing one page design
-- Easy to customize
 {{% /jumbotron %}}
