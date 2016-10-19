@@ -23,7 +23,7 @@ weight = 0
 This demo website is powered by [Academic](https://github.com/gcushen/hugo-academic), [Hugo](https://gohugo.io), and [GitHub Pages](https://github.com/), and can be built in **under 10 minutes**.
 
 <div style="text-align: center;">
-  <a class="btn btn-primary btn-lg" style="padding: 15px 30px; font-size: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem;" href="./post/getting-started/">Get Started!</a>
+  <a class="btn btn-intro btn-lg" href="./post/getting-started/">Get Started!</a>
 </div>
 
 Explore the demo below and head on over to the [Posts](#posts) section for the latest documentation.
