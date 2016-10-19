@@ -7,7 +7,7 @@ draft = false
 widget = "about"
 
 # Order that this section will appear in.
-weight = 0
+weight = 1
 
 # List your academic interests.
 [interests]
@@ -38,24 +38,6 @@ weight = 0
   year = 2008
  
 +++
-
-# Academic Theme Demo
-
-The [Academic theme](https://github.com/gcushen/hugo-academic) enables you to easily create a personal academic website using the [Hugo](https://gohugo.io) static site generator.
-
-Key features:
-
-- Designed for academic staff, students, or general personal use
-- Includes Biography, Publications, Projects, News/Blog, Teaching, and Contact sections
-- Write in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
-- Academic linking (Scholar etc.), [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
-- Responsive and mobile friendly
-- Simple and refreshing one page design
-- Easy to customize
-
-**Feel free to explore this demo and then head on over to the [Posts](#posts) section for the installation guide and latest documentation.**
-
-**Please consider to [_star_ the project on Github](https://github.com/gcushen/hugo-academic) to show your support and keep track of updates.**
 
 # Biography
 

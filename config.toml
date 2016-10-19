@@ -3,6 +3,7 @@ title = "Academic Theme"
 copyright = "&copy; 2016 Your Name"
 languageCode = "en-us"
 theme = "academic"
+enableEmoji = true
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = "spf13"
@@ -85,6 +86,11 @@ googleAnalytics = "UA-78646709-1"
 [[menu.main]]
   name = "Home"
   url = "#top"
+  weight = 0
+
+[[menu.main]]
+  name = "About"
+  url = "#bio"
   weight = 1
 
 [[menu.main]]
