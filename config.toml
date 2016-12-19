@@ -95,7 +95,7 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Home"
-  url = "#academic"
+  url = "#intro"
   weight = 0
 
 [[menu.main]]
