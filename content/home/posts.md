@@ -12,12 +12,11 @@ widget = "posts"
 # Order that this section will appear in.
 weight = 30
 
+# Show posts that contain the following tags. Default to any tags.
+tags = []
+
 # Number of posts to list.
 count = 5
-
-# Links.
-str_all = "More Posts"
-str_read_more = "CONTINUE READING"
 
 +++
 

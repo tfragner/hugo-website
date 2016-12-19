@@ -38,4 +38,9 @@ Key features:
 - Academic linking (Scholar etc.), [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Mobile and tablet friendly
 - Simple and refreshing one page design
+
+<div style="text-align: center;">
+  <a class="btn btn-intro btn-lg" style="font-size: 1rem; margin-bottom: 0;" href="https://twitter.com/intent/tweet?text=I%27m%20revamping%20my%20website%20with%20the%20awesome%20Academic%20Theme%20by%20%40GeorgeCushen&amp;url=https%3A%2F%2Fgoo.gl%2FsqhmTN" target="_blank">Tweet It!</a>
+</div>
+
 {{% /jumbotron %}}

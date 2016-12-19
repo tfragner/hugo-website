@@ -11,7 +11,6 @@ weight = 1
 
 # List your academic interests.
 [interests]
-  title = "Interests"
   interests = [
     "Artificial Intelligence",
     "Computational Linguistics",
@@ -19,9 +18,6 @@ weight = 1
   ]
 
 # List your qualifications (such as academic degrees).
-[education]
-  title = "Education"
-
 [[education.courses]]
   course = "PhD in Artificial Intelligence"
   institution = "Stanford University"
@@ -42,3 +38,5 @@ weight = 1
 # Biography
 
 Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 

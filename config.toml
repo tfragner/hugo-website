@@ -1,9 +1,9 @@
 baseurl = "https://gcushen.github.io/hugo-academic-demo/"
 title = "Academic Theme"
 copyright = "&copy; 2016 Your Name"
-languageCode = "en-us"
 theme = "academic"
 enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = "spf13"
@@ -11,6 +11,12 @@ disqusShortname = "spf13"
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-78646709-1"
 
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[blackfriday]
+  hrefTargetBlank = true
 
 [params]
   name = "Lena Smith"
@@ -18,8 +24,10 @@ googleAnalytics = "UA-78646709-1"
   organization = "Stanford University"
   avatar = "portrait.jpg"
   email = "test@example.org"
-  address = "Stanford AI Lab, Stanford University, California, 90210, USA."
+  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  office_hours = "Monday 10:00 to 13:00 or email for appointment"
   phone = "888 888 88 88"
+  skype = "echo123"
 
   # Enable Keybase in Contact section by entering your keybase.io username.
   keybase = ""
@@ -81,6 +89,8 @@ googleAnalytics = "UA-78646709-1"
 
 
 # Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
 
 [[menu.main]]
@@ -90,12 +100,12 @@ googleAnalytics = "UA-78646709-1"
 
 [[menu.main]]
   name = "About"
-  url = "#bio"
+  url = "#about"
   weight = 1
 
 [[menu.main]]
   name = "Publications"
-  url = "#publications"
+  url = "#publications_selected"
   weight = 2
 
 [[menu.main]]
@@ -117,3 +127,10 @@ googleAnalytics = "UA-78646709-1"
   name = "Contact"
   url = "#contact"
   weight = 6
+
+# Languages
+#   Create a [languages.X] block for each language you want, where X is the language ID.
+
+# Configure the English version of the website.
+[languages.en]
+  languageCode = "en-us"
