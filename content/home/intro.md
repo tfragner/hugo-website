@@ -6,7 +6,7 @@ title = "Academic"
 subtitle = "**Create a beautifully simple academic or personal website**"
 
 # Order that this section will appear in.
-weight = 0
+weight = 1
 
 +++
 
