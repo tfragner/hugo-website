@@ -1,6 +1,6 @@
 baseurl = "https://gcushen.github.io/hugo-academic-demo/"
 title = "Academic Theme"
-copyright = "&copy; 2016 Your Name"
+copyright = "&copy; 2017 Your Name"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"

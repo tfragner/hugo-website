@@ -6,7 +6,7 @@ date = "2016-04-20T00:00:00"
 draft = false
 
 title = "Recent Publications"
-subtitle = ""
+subtitle = "[Search publications](./publication/)"
 widget = "publications"
 
 # Order that this section will appear in.
