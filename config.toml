@@ -1,4 +1,5 @@
-baseurl = "https://gcushen.github.io/hugo-academic-demo/"
+# baseurl = "https://gcushen.github.io/hugo-academic-demo/"
+baseurl = "https://sourcethemes.com/academic/"
 title = "Academic Theme"
 copyright = "&copy; 2017 Your Name"
 theme = "academic"
