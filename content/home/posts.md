@@ -14,7 +14,7 @@ weight = 40
 
 # Show posts that contain the following tags. Default to any tags.
 tags_include = []
-tags_exclude = ["release"]
+tags_exclude = ["updates"]
 
 # Number of posts to list.
 count = 5
