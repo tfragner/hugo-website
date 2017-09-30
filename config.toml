@@ -4,6 +4,8 @@ copyright = "&copy; 2017 George Cushen"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+paginate = 10
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = "academic-3"
@@ -15,10 +17,22 @@ googleAnalytics = "UA-78646709-1"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[outputs]
+  home = [ "HTML", "CSS" ]
+
 [blackfriday]
   hrefTargetBlank = true
 
 [params]
+  # Color theme.
+  #   Choose from `default`, `ocean`, or `forest`.
+  color_theme = "default"
+
+  # Font style.
+  #   Choose from `default` or `classic`.
+  font = "default"
+
+  # Your details.
   name = "Lena Smith"
   role = "Professor of Artificial Intelligence"
   organization = "Stanford University"
@@ -199,5 +213,5 @@ defaultContentLanguageInSubdir = false
 #   Create a [languages.X] block for each language you want, where X is the language ID.
 
 # Configure the English version of the website.
-[languages.en]
+[Languages.en]
   languageCode = "en-us"
