@@ -37,6 +37,7 @@ Key features:
 - Need a different section? Just use the Custom widget!
 - Write in [Markdown]({{< ref "post/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
+- Make it your own by installing color themes
 - Responsive and mobile friendly
 - Simple and refreshing one page design
 
