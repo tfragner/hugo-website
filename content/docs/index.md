@@ -2,17 +2,18 @@
 date = 2016-04-20
 lastmod = 2017-09-03
 draft = false
-tags = ["academic", "hugo"]
-title = "Getting started with the Academic framework for Hugo"
+# tags = ["academic", "hugo"]
+title = "Getting started"
 math = true
 summary = """
 Create a beautifully simple personal or academic website in under 10 minutes. 
 """
 
-[header]
-image = "headers/getting-started.png"
-caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
+aliases = ["post/getting-started/"]
 
+# [header]
+# image = "headers/getting-started.png"
+# caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 +++
 
 The Academic framework enables you to easily create a beautifully simple personal or academic website using the [Hugo](https://gohugo.io) static site generator.
@@ -20,15 +21,14 @@ The Academic framework enables you to easily create a beautifully simple persona
 Key features:
 
 - Easily manage your homepage, blog posts, publications, talks, and projects
-- Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact
-- Need a different section? Just use the Custom widget!
-- Write in [Markdown]({{< ref "post/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
+- Configurable [widgets](./widgets/) available
+- Customize your site with [themes](./themes/)
+- Can't find the widget you want? Use the Custom widget!
+- Write in [Markdown]({{< ref "docs/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
 - Multilingual and easy to customize
-
-{{% toc %}}
 
 ## Installation
 
@@ -80,15 +80,15 @@ Edit your biography in the *about* widget `content/home/about.md` that you copie
 
 ### Customize the homepage
 
-Refer to our guide on using [widgets]({{< ref "post/widgets.md" >}}) to customize your homepage.
+Refer to our guide on using [widgets]({{< ref "widgets.md" >}}) to customize your homepage.
 
 ### Add your content
 
-Refer to our guide on [managing content]({{< ref "post/managing-content.md" >}}) to create your own publications, blog posts, talks, and projects.
+Refer to our guide on [managing content]({{< ref "docs/managing-content.md" >}}) to create your own publications, blog posts, talks, and projects.
 
 ### Remove unused widgets and pages
 
-[How to remove unused widgets and content pages]({{< ref "post/managing-content.md#removing-content" >}}).
+[How to remove unused widgets and content pages]({{< ref "docs/managing-content.md#removing-content" >}}).
 
 ### Themes
 

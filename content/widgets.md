@@ -1,15 +1,17 @@
 +++
 date = 2016-04-19
+lastmod = 2017-11-17
 draft = false
-tags = ["academic", "hugo"]
-title = "Customizing the homepage with widgets"
+# tags = ["academic", "hugo"]
+title = "Widgets"
 math = false
 summary = """
 Enable/disable and configure widgets to customize your homepage.
 """
+aliases = ["post/widgets/"]
 +++
 
-Homepage widgets display as sections on the homepage. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:
+Widgets empower you to fully customize your site. They display as sections on the homepage or on widget pages. They can be enabled/disabled and configured as desired. Academic has the following widgets available to use:
 
 - About/biography
 - Selected publications
@@ -21,7 +23,7 @@ Homepage widgets display as sections on the homepage. They can be enabled/disabl
 - Contact
 - Tag cloud
 - Hero (introduction)
-- Custom widget (demonstrated with the *teaching* example)
+- Custom widget (add your own content!)
 
 The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don't need and customize the parameters of the widgets you wish to keep.
 

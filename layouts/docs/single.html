@@ -1,0 +1,98 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="container body-content docs">
+  <div class="row">
+
+    <nav id="docs-navbar" class="docs-nav visible-md visible-lg affix">
+
+      <ul>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.docs.ByWeight }}
+        <li>
+          <a href="{{ if .HasChildren }}javascript:void(0){{ else }}{{ .URL }}{{ end }}" data-target=".{{ .Name | urlize }}">{{ .Name }}</a>
+
+          {{ if .HasChildren }}
+          <ul class="{{ .Name | urlize }}">
+            {{ range .Children }}
+            <li>
+              <a href="{{.URL}}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+          </ul>
+          {{end}}
+        </li>
+        {{end}}
+      </ul>
+    </nav>
+
+    <div class="col-md-2">
+      <nav id="small-nav" class="docs-nav hidden-md hidden-lg">
+        <h4>Topics</h4>
+        {{ $currentPage := . }}
+        {{ $menu := .Site.Menus.docs.ByWeight }}
+        <ul>
+          {{ range $menu }}
+          <li>
+            <a href="{{.URL}}">{{ .Name }}</a>
+          </li>
+          {{end}}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col-sm-9 col-md-8 body">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        {{ partial "header_image.html" . }}
+
+        <div class="article-container">
+          <div class="article-inner">
+
+            <div class="edit-github pull-right">
+              <a href="http://prose.io/#sourcethemes/academic-www/edit/master/content/{{.File.Path}}" tabindex="-1">
+                <button type="button" class="btn btn-default"><i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class="hidden-xs">Edit</span></button>
+              </a>
+            </div>
+
+            <h1 itemprop="name">{{ .Title }}</h1>
+
+            <div class="article-style" itemprop="articleBody">
+              {{ .Content }}
+            </div>
+
+            {{ partial "tags.html" . }}
+          </div>
+        </div>
+
+      </article>
+
+      <div class="body-footer">
+        {{ i18n "last_updated" }} {{ $.Lastmod.Format $.Site.Params.date_format }}
+      </div>
+
+    </div>
+
+    <div class="hidden-xs col-sm-3 col-md-2">
+      <nav id="docs-subnavbar" class="affix">
+        {{ partial "toc" . }}
+        <ul class="nav article-toc-top">
+          <li><a href="#">Back to Top</a></li>
+        </ul>
+
+        <div class="connect-widget">
+          <ul class="connect-links fa-ul">
+            <li><i class="fa-li fa fa-question-circle"></i><a href="http://discuss.gohugo.io/" target="_blank">Ask questions</a></li>
+            <li><i class="fa-li fa fa-comments-o"></i><a href="https://github.com/gcushen/hugo-academic/issues" target="_blank">Request features</a></li>
+            <li><i class="fa-li fa fa-bug"></i><a href="https://github.com/gcushen/hugo-academic/issues" target="_blank">Report issues</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

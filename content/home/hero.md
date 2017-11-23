@@ -1,13 +1,15 @@
 +++
 # Hero widget.
-widget = "hero"
+widget = "hero_img"
 active = true
 date = 2017-10-15
 
 title = "Academic"
 
 # Order that this section will appear in.
-weight = 3
+weight = 10
+
+img = "screenshot.png"
 
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
@@ -20,13 +22,15 @@ weight = 3
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
-  url = "./post/getting-started/"
+  url = "./docs/"
   label = '<i class="fa fa-download"></i> Install Now'
 +++
 
 The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes :rocket:
 <br>
-<small><a id="academic-release" href="https://sourcethemes.com/academic/tags/updates">Latest release</a></small>
+[View the Demo!](https://themes.gohugo.io/theme/academic/)
+<br>
+<small><a id="academic-release" href="./tags/updates">Latest release</a></small>
 <br><br>
 <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=gcushen&amp;repo=hugo-academic&amp;type=star&amp;count=true&amp;size=large" scrolling="0" width="160px" height="30px" frameborder="0"></iframe>
 <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=gcushen&amp;repo=hugo-academic&amp;type=fork&amp;count=true&amp;size=large" scrolling="0" width="158px" height="30px" frameborder="0"></iframe>

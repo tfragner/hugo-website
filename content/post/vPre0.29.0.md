@@ -7,7 +7,7 @@ math = false
 summary = " "
 +++
 
-Release Notes tell you what's new in Academic. As always, we welcome your [feedback](https://github.com/gcushen/hugo-academic/issues). You can also [file a bug report](https://github.com/gcushen/hugo-academic/issues). Want to update to the latest version? Refer to the [update guide](https://sourcethemes.com/academic/post/getting-started/#upgrading).
+Release Notes tell you what's new in Academic. As always, we welcome your [feedback](https://github.com/gcushen/hugo-academic/issues). You can also [file a bug report](https://github.com/gcushen/hugo-academic/issues). Want to update to the latest version? Refer to the [update guide](https://sourcethemes.com/academic/docs/#updating).
 
 ## See what's new in Academic!
 

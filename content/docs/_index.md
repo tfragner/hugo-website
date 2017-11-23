@@ -1,6 +1,7 @@
 +++
-title = "Content tagged as 'Jekyll'"
-date = "2017-01-01T00:00:00"
+title = "Documentation"
+date = 2017-11-19
+
 math = false
 highlight = false
 
@@ -8,6 +9,4 @@ highlight = false
 [header]
 image = ""
 caption = ""
-
 +++
-

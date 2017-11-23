@@ -1,8 +1,8 @@
 +++
 date = 2016-04-10
-# lastmod = 2017-09-03
+lastmod = 2017-11-22
 draft = false
-tags = ["academic", "hugo"]
+# tags = ["academic", "hugo"]
 title = "Frequently Asked Questions (FAQ)"
 summary = """Troubleshoot common issues."""
 +++
