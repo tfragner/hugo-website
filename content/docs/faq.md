@@ -3,7 +3,7 @@ date = 2016-04-10
 lastmod = 2017-11-22
 draft = false
 # tags = ["academic", "hugo"]
-title = "Frequently Asked Questions (FAQ)"
+title = "Troubleshooting"
 summary = """Troubleshoot common issues."""
 +++
 

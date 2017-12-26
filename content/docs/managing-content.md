@@ -1,10 +1,13 @@
 +++
 date = 2016-04-18
 draft = false
-# tags = ["academic", "hugo"]
 title = "Managing content"
 math = false
 aliases = ["post/managing-content/"]
+
+[menu.docs]
+  parent = "content"
+  weight = 20
 +++
 
 This is a brief guide to managing content with the Academic framework. Content can include publications, projects, talks, news/blog articles, and widget pages. After you have read this guide about creating and managing content, you may also be interested to learn about [writing content with Markdown, LaTeX, and Shortcodes]({{< ref "docs/writing-markdown-latex.md" >}}).<!--more-->

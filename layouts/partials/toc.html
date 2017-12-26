@@ -5,51 +5,54 @@
   <h4 class="text-muted">Contents</h4>
   <ul class="nav">
     {{ range $i, $header := $headers }}
-      {{ $headerLevel := index (findRE "[1-3]" . 1) 0 }}
-      {{ $headerLevel := len (seq $headerLevel) }}
+      {{ $header_level := index (findRE "[1-3]" . 1) 0 }}
+      {{ $header_level := len (seq $header_level) }}
 
-      {{ $anchorID := index (findRE "id=.([^\"]+)." $header 1) 0 }}
-      {{ $anchorID := replace $anchorID "id=\"" "" }}
-      {{ $anchorID := replace $anchorID "\"" "" }}
+      {{ $hash := index (findRE "id=.([^\"]+)." $header 1) 0 }}
+      {{ $hash := replace $hash "id=\"" "" }}
+      {{ $hash := replace $hash "\"" "" }}
 
       {{ if ne $i 0 }}
-        {{ $prevHeaderLevel := index (findRE "[1-3]" (index $headers (sub $i 1)) 1) 0 }}
-        {{ $prevHeaderLevel := len (seq $prevHeaderLevel) }}
+        {{ $previous_level := index (findRE "[1-3]" (index $headers (sub $i 1)) 1) 0 }}
+        {{ $previous_level := len (seq $previous_level) }}
 
-        {{ if gt $headerLevel $prevHeaderLevel }}
-          {{ range seq (sub $headerLevel $prevHeaderLevel) }}
+        {{ if gt $header_level $previous_level }}
+          {{ range seq (sub $header_level $previous_level) }}
           <ul class="nav">
           {{ end }}
         {{ end }}
 
-        {{ if lt $headerLevel $prevHeaderLevel }}
-          {{ range seq (sub $prevHeaderLevel $headerLevel) }}
+        {{ if lt $header_level $previous_level }}
+          {{ range seq (sub $previous_level $header_level) }}
           </li></ul></li>
           {{ end }}
         {{ end }}
 
-        {{ if eq $headerLevel $prevHeaderLevel }}
-        </li>
+        {{ if eq $header_level $previous_level }}
+          </li>
         {{ end }}
 
         <li>
-          <a href="#{{ $anchorID }}">{{ $header | plainify | safeHTML }}</a>
+          <a href="#{{ $hash }}">{{ $header | plainify | safeHTML }}</a>
 
         {{ if eq $i (sub (len $headers) 1) }}
-          {{ range seq (sub $prevHeaderLevel $headerLevel) }}
+          {{ range seq (sub $previous_level $header_level) }}
           </li></ul></li>
           {{ end }}
         {{ end }}
+
       {{ else }}
+
       <li>
-        <a href="#{{ $anchorID }}">{{ $header | plainify | htmlEscape }}</a>
+        <a href="#{{ $hash }}">{{ $header | plainify | safeHTML }}</a>
+
       {{end}}
     {{end}}
 
-    {{ $firstHeaderLevel := len (seq (index (findRE "[1-3]" (index $headers 0) 1) 0)) }}
-    {{ $lastHeaderLevel := len (seq (index (findRE "[1-3]" (index $headers (sub (len $headers) 1)) 1) 0)) }}
-    {{ range seq (sub $lastHeaderLevel $firstHeaderLevel) }}
-    </li></ul></li>
+    {{ $first_level := len (seq (index (findRE "[1-3]" (index $headers 0) 1) 0)) }}
+    {{ $last_level := len (seq (index (findRE "[1-3]" (index $headers (sub (len $headers) 1)) 1) 0)) }}
+    {{ range seq (sub $last_level $first_level) }}
+      </li></ul></li>
     {{end}}
 
   </ul>

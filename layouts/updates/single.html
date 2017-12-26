@@ -8,47 +8,36 @@
     <nav id="docs-navbar" class="docs-nav visible-md visible-lg affix">
 
       <ul id="docs-main-nav">
-        {{ range .Site.Menus.docs.ByWeight }}
-        <li {{ if .HasChildren }}class="panel collapsed"{{ end }}{{ if $current_page.IsMenuCurrent "docs" . }}class="active"{{ end }}>
+        {{ range .Site.Menus.updates.ByName.Reverse }}
+        <li {{ if .HasChildren }}class="panel collapsed"{{ end }}{{ if $current_page.IsMenuCurrent "updates" . }}class="active"{{ end }}>
           {{ if .HasChildren }}
-          <a class="area {{ if not ($current_page.HasMenuCurrent "docs" .) }}collapsed{{end}}" href="#{{ .Name | urlize }}" data-parent="#docs-main-nav" data-toggle="collapse" aria-expanded="{{ if $current_page.HasMenuCurrent "docs" . }}true{{ else }}false{{ end }}">{{ .Name }}</a>
+          <a class="area {{ if not ($current_page.HasMenuCurrent "updates" .) }}collapsed{{end}}" href="#{{ .Name | urlize }}" data-parent="#docs-main-nav" data-toggle="collapse" aria-expanded="{{ if $current_page.HasMenuCurrent "updates" . }}true{{ else }}false{{ end }}">{{ .Name }}</a>
 
-          <ul id="{{ .Name | urlize }}" class="collapse {{ if or ($current_page.IsMenuCurrent "docs" .) ($current_page.HasMenuCurrent "docs" .) }}in{{ end }}">
+          <ul id="{{ .Name | urlize }}" class="collapse {{ if or ($current_page.IsMenuCurrent "updates" .) ($current_page.HasMenuCurrent "updates" .) }}in{{ end }}">
             {{ range .Children }}
-            <li {{ if $current_page.IsMenuCurrent "docs" . }}class="active"{{ end }}>
+            <li {{ if $current_page.IsMenuCurrent "updates" . }}class="active"{{ end }}>
               <a href="{{ .URL }}">{{ .Name }}</a>
             </li>
             {{ end }}
           </ul>
           {{ else }}
           <a href="{{ .URL }}">{{ .Name }}</a>
-          {{ end }}
+          {{end}}
         </li>
-        {{ end }}
+        {{end}}
       </ul>
     </nav>
 
     <div class="col-md-2">
       <nav id="small-nav" class="docs-nav hidden-md hidden-lg">
         <h4>Topics</h4>
-        {{ $menu := .Site.Menus.docs.ByWeight }}
+        {{ $menu := .Site.Menus.updates.ByName.Reverse }}
         <ul>
-        {{ range $menu }}
+          {{ range $menu }}
           <li>
-            {{ if .HasChildren }}
-              {{ .Name }}
-              <ul>
-              {{ range .Children }}
-                <li>
-                  <a href="{{ .URL }}">{{ .Name }}</a>
-                </li>
-              {{ end }}
-              </ul>
-            {{ else }}
-              <a href="{{ .URL }}">{{ .Name }}</a>
-            {{ end }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
           </li>
-          {{ end }}
+          {{end}}
         </ul>
       </nav>
     </div>

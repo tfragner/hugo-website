@@ -1,10 +1,14 @@
 +++
 date = 2016-04-17
 draft = false
-tags = []
 title = "Writing content with Markdown, LaTeX, and Shortcodes"
 math = true
 aliases = ["post/writing-markdown-latex/"]
+
+linktitle = "Writing content"
+[menu.docs]
+  parent = "content"
+  weight = 30
 +++
 
 Content can be written using [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics), and [Hugo Shortcodes](http://gohugo.io/extras/shortcodes/). Additionally, HTML may be used for advanced formatting.<!--more--> This article gives an overview of the most common formatting options.
