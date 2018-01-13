@@ -1,7 +1,10 @@
 +++
-date = 2016-04-17
-draft = false
 title = "Writing content with Markdown, LaTeX, and Shortcodes"
+
+date = 2016-04-17
+lastmod = 2018-01-13
+draft = false
+
 math = true
 aliases = ["post/writing-markdown-latex/"]
 
@@ -52,6 +55,25 @@ A general image:
 A numbered figure with caption:
 
     {{</* figure src="/img/screenshot.png" title="Figure Caption" */>}}
+
+## Image gallery
+
+To add an image gallery to a page:
+
+1. Add gallery images to within your `static/img/` folder
+2. Reference your images at the end of the front matter of a content file in the form:
+    ```
+    [[gallery_item]]
+    album = "1"
+    image = "my_image.jpg"
+    caption = "Write your image caption here"
+    
+    [[gallery_item]]
+    album = "1"
+    image = "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png"
+    caption = "Dark theme"
+    ```
+3. Display the gallery somewhere within your page content by using `{{< gallery album="1" >}}`
 
 ## Links
 
