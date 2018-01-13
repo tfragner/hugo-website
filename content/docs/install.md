@@ -1,13 +1,11 @@
 +++
+title = "Install"
+
 date = 2016-04-20
 lastmod = 2017-12-26
 draft = false
-# tags = ["academic", "hugo"]
-title = "Install"
+
 math = true
-summary = """
-Create a beautifully simple personal or academic website in under 10 minutes. 
-"""
 
 [menu.docs]
   parent = "setup"
@@ -61,7 +59,7 @@ If you wish to initialise your site with the demo content, copy the contents of 
 
 ## Install with RStudio
 
-In RStudio IDE (v0.2+), install the *Blogdown* and *Hugo* dependencies:
+In RStudio IDE, install the *Blogdown (v0.2+)* and *Hugo* dependencies:
 
 ```r
 install.packages("blogdown")
