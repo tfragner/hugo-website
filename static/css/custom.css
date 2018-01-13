@@ -1,24 +1,3 @@
-/* Gallery */
-
-a[data-fancybox] img {
-  height: inherit;
-  max-width: inherit;
-  display: inherit;
-  margin: 0;
-}
-
-a[data-fancybox="gallery1"] img {
-  height: 250px;
-  max-width: inherit;
-  display: inherit;
-}
-
-.fancybox-caption {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-align: center;
-}
-
 /* Jumbotron styles. */
 
 .jumbotron p {
@@ -47,30 +26,6 @@ a[data-fancybox="gallery1"] img {
 
 .home-section {
   padding: 60px 0 60px 0;
-}
-
-/* Featurette widget. */
-
-.featurette {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #555;
-  text-align: center;
-}
-
-.featurette h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  font-weight: 400;
-  color: #333;
-}
-
-.featurette-icon {
-  display: block;
-  width: 100%;
-  color: #3f51b5;
-  font-size: 3rem;
-  text-align: center;
 }
 
 /* Documentation styles. */

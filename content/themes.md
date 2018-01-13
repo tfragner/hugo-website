@@ -24,16 +24,16 @@ The following color themes are available and can be set by the `color_theme` opt
 </div>
 <div class="row">
   <div class="col-md-3">
-  {{< gallery group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png" caption="Default theme" >}}
+  {{< gallery_item group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png" caption="Default theme" >}}
     </div>
     <div class="col-md-3">
-    {{< gallery group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png" caption="Ocean theme" >}}
+    {{< gallery_item group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png" caption="Ocean theme" >}}
   </div>
     <div class="col-md-3">
-    {{< gallery group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png" caption="Dark theme" >}}
+    {{< gallery_item group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png" caption="Dark theme" >}}
   </div>
     <div class="col-md-3">
-    {{< gallery group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png" caption="Forest theme" >}}
+    {{< gallery_item group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png" caption="Forest theme" >}}
   </div>
 </div>
 
@@ -43,9 +43,9 @@ The following color themes are available and can be set by the `color_theme` opt
 </div>
 <div class="row">
   <div class="col-md-3">
-    {{< gallery group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png" caption="Coffee theme and Playfair font" >}}
+    {{< gallery_item group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png" caption="Coffee theme and Playfair font" >}}
 	</div>
 	<div class="col-md-3">
-    {{< gallery group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-1950s.png" caption="1950s theme" >}}
+    {{< gallery_item group="1" src="https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-1950s.png" caption="1950s theme" >}}
   </div>
 </div>

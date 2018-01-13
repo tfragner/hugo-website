@@ -73,7 +73,7 @@ To add an image gallery to a page:
     image = "https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png"
     caption = "Dark theme"
     ```
-3. Display the gallery somewhere within your page content by using `{{< gallery album="1" >}}`
+3. Display the gallery somewhere within your page content by using `{{</* gallery album="1" */>}}`
 
 ## Links
 
