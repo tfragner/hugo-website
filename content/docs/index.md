@@ -1,13 +1,11 @@
 +++
+title = "Getting started"
+
 date = 2016-04-20
 lastmod = 2017-09-03
 draft = false
-# tags = ["academic", "hugo"]
-title = "Getting started"
+
 math = true
-summary = """
-Create a beautifully simple personal or academic website in under 10 minutes. 
-"""
 
 # [header]
 # image = "headers/getting-started.png"
@@ -18,9 +16,8 @@ The Academic framework enables you to easily create a beautifully simple website
 
 Key features:
 
-- Easily manage your homepage, blog posts, publications, talks, and projects
-- Configurable [widgets](../widgets/) available
-- Customize your site with [themes](../themes/)
+- Easily manage various content including homepage, blog posts, publications, talks, and projects
+- Extensible via [themes](../themes/) and [plugins](../widgets/)
 - Can't find the widget you want? Use the Custom widget!
 - Write in [Markdown]({{< ref "docs/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
