@@ -1,25 +1,19 @@
 +++
-date = 2017-12-24
-lastmod = 2017-12-24
-draft = false
-# tags = ["academic", "hugo"]
 title = "Overview"
-math = true
-summary = """
-Create a beautifully simple personal or academic website in under 10 minutes. 
-"""
+
+date = 2017-12-24
+lastmod = 2018-01-20
+draft = false
 
 [menu.docs]
     parent = "deploy"
     identifier = "deployment"
     weight = 1
-
-# [header]
-# image = "headers/getting-started.png"
-# caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 +++
 
 Sites built using Academic can be deployed in a large variety of ways due to the static nature of the generated website. The recommended deployment method alongside a few of the other most popular techniques are described below.
+
+If using Netlify, your site will be built automatically, otherwise run the `hugo` command in your terminal to generate your site in the `public/` folder - now it is ready to copy across to your host.
 
 ## Netlify
 

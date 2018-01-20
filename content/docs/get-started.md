@@ -1,27 +1,20 @@
 +++
-date = 2016-04-20
-lastmod = 2017-09-03
-draft = false
-# tags = ["academic", "hugo"]
 title = "Getting started"
+
+date = 2016-04-20
+lastmod = 2018-01-20
+draft = false
+
 math = true
-summary = """
-Create a beautifully simple personal or academic website in under 10 minutes. 
-"""
 
 aliases = ["post/getting-started/"]
 
 [menu.docs]
     parent = "setup"
     weight = 20
-
-
-# [header]
-# image = "headers/getting-started.png"
-# caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 +++
 
-In this section, we will explore some of the common options for customizing your site.
+This quick tutorial will show you how to setup and use Academic.
 
 ## Core parameters
 
@@ -60,3 +53,15 @@ The following font styles are available and can be set by the `font` option in `
 - default (modern)
 - classic (original Academic v1 style)
 - playfair (serif)
+
+To **customize the color theme**, you can copy a theme such as `themes/academic/data/themes/default.toml` to `data/themes/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/themes/` folders if they do not already exist. Now you can adjust the colors within your theme file. Consider renaming and *sharing* your new color theme with the [community](http://discuss.gohugo.io/).
+
+To **customize the font theme**, you can copy a theme such as `themes/academic/data/fonts/default.toml` to `data/fonts/default.toml` (at the root of your site, **not** in `themes/academic/`), creating the `data/fonts/` folders if they do not already exist. Now you can adjust the font size and family. Consider renaming and *sharing* your new font theme with the [community](http://discuss.gohugo.io/).
+
+## View your site
+
+If you installed on your computer with **Git** or **ZIP**, view your new website by running the `hugo server` command.
+
+If you installed using **RStudio**, run `blogdown::serve_site()` to preview your site in your web browser. We recommend previewing your site in your normal web browser as the in-built RStudio web browser is very outdated and buggy.
+
+Now visit [localhost:1313](http://localhost:1313) and your new Academic powered website will appear. Otherwise, if using **Netlify**, they will provide you with your URL.

@@ -1,9 +1,11 @@
 +++
-date = 2016-04-19
-lastmod = 2017-11-17
-draft = false
-# tags = ["academic", "hugo"]
 title = "Widgets"
+
+date = 2016-04-19
+lastmod = 2018-01-20
+draft = false
+
+# tags = ["academic", "hugo"]
 math = false
 summary = """
 Enable/disable and configure widgets to customize your homepage.
@@ -23,6 +25,7 @@ Widgets empower you to fully customize your site. They display as sections on th
 - Contact
 - Tag cloud
 - Hero (introduction)
+- Featurette (show features)
 - Custom widget (add your own content!)
 
 The example site that you copied to create your site uses all the different types of widget (except talks), so you can generally just delete the widgets you don't need and customize the parameters of the widgets you wish to keep.

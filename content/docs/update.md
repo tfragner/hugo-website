@@ -1,21 +1,13 @@
 +++
+title = "Update"
+
 date = 2016-04-20
 lastmod = 2017-12-26
 draft = false
-# tags = ["academic", "hugo"]
-title = "Update"
-math = true
-summary = """
-Create a beautifully simple personal or academic website in under 10 minutes. 
-"""
 
 [menu.docs]
     parent = "setup"
     weight = 50
-
-# [header]
-# image = "headers/getting-started.png"
-# caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 +++
 
 Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](../../updates) prior to updating your site.
