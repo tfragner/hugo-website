@@ -27,26 +27,19 @@ Go to [Github](http://www.github.com/) and register for an account if you have n
 
 Once you have created your Github account and setup Git on your computer, we will create two new repositories (often abbreviated as *repos*) on Github with the following names:
                                                                     
-- `website` or any other name you like - we will save your Academic content to this repo
+- `academic-kickstart` or any other name you like - we will save your Academic content to this repo
 - `<USERNAME>.github.io` where `<USERNAME>` is your Github username - we will save the generated HTML website to this repo
 
-To create the `website` repository, click the "+" icon in the top right corner and then choose “New Repository”.
+To create the `<USERNAME>.github.io` repository, click the "+" icon in the top right corner and then choose “New Repository”.
  
-For the `<USERNAME>.github.io` repository, [**fork**](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository and rename the repository to `<USERNAME>.github.io` by navigating to the *Settings* tab in Github, where `<USERNAME>` is your Github username.
-
-Clone your fork with Git (download it to your computer): 
+To create the `academic-kickstart` repository, [**fork**](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository and clone your fork with Git (download it to your computer) by replacing `<USERNAME>` in the following command with your Github username: 
                                          
-    git clone https://github.com/<USERNAME>/<USERNAME>.github.io.git My_Website
+    git clone https://github.com/<USERNAME>/academic-kickstart.git My_Website
     cd My_Website
                                              
-In your Academic `config.toml` file, set `baseurl = "https://<USERNAME>.github.io/"`, where `<USERNAME>` is your Github username. Stop Hugo if it's running and delete the `public` directory (if it exists) with:
+In your `config.toml` file, set `baseurl = "https://<USERNAME>.github.io/"`, where `<USERNAME>` is your Github username. Stop Hugo if it's running and delete the `public` directory (if it exists) with:
  
     rm -r public/
-
-Whilst your terminal is still in the root folder of your website, initialize a git repository and add the remote Github repository that you created:
-
-    git init
-    git remote add origin https://github.com/<USERNAME>/website.git
 
 Add your *<USERNAME>.github.io* repository into a submodule in a folder named *public*, replacing *<USERNAME>* with your Github username:
 
@@ -58,7 +51,9 @@ Add everything to your local git repository and push it up to your remote reposi
     git commit -m "Initial commit"
     git push -u origin master
 
-Whilst running the above commands you may be prompted for your Github username and password. Next, regenerate your website's HTML code by running Hugo and upload the *public* submodule to GitHub:
+Whilst running the above commands you may be prompted for your Github username and password.
+
+Next, **regenerate** your website's HTML code by running Hugo and uploading the *public* submodule to GitHub:
 
     hugo
     cd public
@@ -67,6 +62,16 @@ Whilst running the above commands you may be prompted for your Github username a
     git push -u origin master
 
 Once Git has finished uploading your site to Github, you can open your new  `https://<USERNAME>.github.io` website in your browser, substituting *<USERNAME>* with your Github username.
+
+### Custom domains
+
+You can use your own domain name with Github Pages if you wish. You will need to register a domain, point it to Github, and create a `CNAME` file in the `static` folder of your website, so that Github knows your intentions. For more information, check out the [domains guide by Github](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
+
+Remember that after you have setup a custom domain, you will need to wait approximately 24-48 hours for the DNS to propagate and then you'll need to update `baseurl` in your Hugo `config.toml` to your new URL, regenerate your site (see above section), and redeploy.
+
+### Automating deployment
+
+If you are feeling more adventurous, you can consider automating deployment such that when a change, such as a new blog post, is pushed to your `academic-kickstart` repository, your `<USERNAME>.github.io` repository is automatically re-built.
 
 ## Amazon S3
 
