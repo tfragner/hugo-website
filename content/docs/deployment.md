@@ -21,7 +21,52 @@ We recommend deploying your site with Netlify. Netlify is free and provides fast
 
 ## GitHub Pages
 
-Follow the instructions on deploying with GitHub Pages toward the end of [this blog post](https://georgecushen.com/create-your-website-with-hugo/).
+Go to [Github](http://www.github.com/) and register for an account if you have not done so already. Github encourage using your real name for your account username, and this can help your Github URL (which you will be assigned later) to have a professional appearance.
+
+[Install Git](https://help.github.com/articles/set-up-git/) if it's not already present on your system. You can check by running `git --version`.
+
+Once you have created your Github account and setup Git on your computer, we will create two new repositories (often abbreviated as *repos*) on Github with the following names:
+                                                                    
+- `website` or any other name you like - we will save your Academic content to this repo
+- `<USERNAME>.github.io` where `<USERNAME>` is your Github username - we will save the generated HTML website to this repo
+
+To create the `website` repository, click the "+" icon in the top right corner and then choose “New Repository”.
+ 
+For the `<USERNAME>.github.io` repository, [**fork**](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the *Academic Kickstart* repository and rename the repository to `<USERNAME>.github.io` by navigating to the *Settings* tab in Github, where `<USERNAME>` is your Github username.
+
+Clone your fork with Git (download it to your computer): 
+                                         
+    git clone https://github.com/<USERNAME>/<USERNAME>.github.io.git My_Website
+    cd My_Website
+                                             
+In your Academic `config.toml` file, set `baseurl = "https://<USERNAME>.github.io/"`, where `<USERNAME>` is your Github username. Stop Hugo if it's running and delete the `public` directory (if it exists) with:
+ 
+    rm -r public/
+
+Whilst your terminal is still in the root folder of your website, initialize a git repository and add the remote Github repository that you created:
+
+    git init
+    git remote add origin https://github.com/<USERNAME>/website.git
+
+Add your *<USERNAME>.github.io* repository into a submodule in a folder named *public*, replacing *<USERNAME>* with your Github username:
+
+    git submodule add https://github.com/<USERNAME>/<USERNAME>.github.io.git public
+
+Add everything to your local git repository and push it up to your remote repository on GitHub:
+
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin master
+
+Whilst running the above commands you may be prompted for your Github username and password. Next, regenerate your website's HTML code by running Hugo and upload the *public* submodule to GitHub:
+
+    hugo
+    cd public
+    git add .
+    git commit -m "Build website"
+    git push -u origin master
+
+Once Git has finished uploading your site to Github, you can open your new  `https://<USERNAME>.github.io` website in your browser, substituting *<USERNAME>* with your Github username.
 
 ## Amazon S3
 
