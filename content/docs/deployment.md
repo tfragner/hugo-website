@@ -2,7 +2,7 @@
 title = "Overview"
 
 date = 2017-12-24
-lastmod = 2018-01-20
+lastmod = 2018-03-02
 draft = false
 
 [menu.docs]
@@ -21,14 +21,14 @@ We recommend deploying your site with Netlify. Netlify is free and provides fast
 
 ## GitHub Pages
 
-Go to [Github](http://www.github.com/) and register for an account if you have not done so already. Github encourage using your real name for your account username, and this can help your Github URL (which you will be assigned later) to have a professional appearance.
+Go to [Github](http://www.github.com/) and register for an account if you have not done so already. Github encourage using your real name as your username, and this can help your Github URL (which you will be assigned later) to have a professional appearance.
 
-[Install Git](https://help.github.com/articles/set-up-git/) if it's not already present on your system. You can check by running `git --version`.
+[Install Git](https://help.github.com/articles/set-up-git/) if it's not already present on your system. You can check by running `git --version` in your Command Prompt/Terminal app.
 
 Once you have created your Github account and setup Git on your computer, we will create two new repositories (often abbreviated as *repos*) on Github with the following names:
                                                                     
-- `academic-kickstart` or any other name you like - we will save your Academic content to this repo
-- `<USERNAME>.github.io` where `<USERNAME>` is your Github username - we will save the generated HTML website to this repo
+- `academic-kickstart` or any other name you like - we will save your **content** to this repo
+- `<USERNAME>.github.io` where `<USERNAME>` is your Github username - we will save the **generated website** to this repo
 
 To create the `<USERNAME>.github.io` repository, click the "+" icon in the top right corner and then choose “New Repository”.
  
@@ -36,14 +36,13 @@ To create the `academic-kickstart` repository, [**fork**](https://github.com/sou
                                          
     git clone https://github.com/<USERNAME>/academic-kickstart.git My_Website
     cd My_Website
+    git submodule update --init --recursive
                                              
-In your `config.toml` file, set `baseurl = "https://<USERNAME>.github.io/"`, where `<USERNAME>` is your Github username. Stop Hugo if it's running and delete the `public` directory (if it exists) with:
- 
-    rm -r public/
+In your `config.toml` file, set `baseurl = "https://<USERNAME>.github.io/"`, where `<USERNAME>` is your Github username. Stop Hugo if it's running and delete the `public` directory if it exists (by typing `rm -r public/`).
 
 Add your *<USERNAME>.github.io* repository into a submodule in a folder named *public*, replacing *<USERNAME>* with your Github username:
 
-    git submodule add https://github.com/<USERNAME>/<USERNAME>.github.io.git public
+    git submodule add -f -b master https://github.com/<USERNAME>/<USERNAME>.github.io.git public
 
 Add everything to your local git repository and push it up to your remote repository on GitHub:
 
@@ -55,13 +54,14 @@ Whilst running the above commands you may be prompted for your Github username a
 
 Next, **regenerate** your website's HTML code by running Hugo and uploading the *public* submodule to GitHub:
 
-    hugo
+    hugo --cleanDestinationDir
     cd public
     git add .
     git commit -m "Build website"
-    git push -u origin master
+    git push origin master
+    cd ..
 
-Once Git has finished uploading your site to Github, you can open your new  `https://<USERNAME>.github.io` website in your browser, substituting *<USERNAME>* with your Github username.
+Once Git has finished uploading your site to Github, you can open your new `https://<USERNAME>.github.io` website in your browser, substituting *<USERNAME>* with your Github username.
 
 ### Custom domains
 
@@ -71,7 +71,7 @@ Remember that after you have setup a custom domain, you will need to wait approx
 
 ### Automating deployment
 
-If you are feeling more adventurous, you can consider automating deployment such that when a change, such as a new blog post, is pushed to your `academic-kickstart` repository, your `<USERNAME>.github.io` repository is automatically re-built.
+If you are feeling more adventurous, you can consider automating deployment so that when a change, such as a new blog post, is pushed to your `academic-kickstart` repository, your website (`<USERNAME>.github.io` repository) is automatically re-built.
 
 ## Amazon S3
 
