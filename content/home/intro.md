@@ -23,18 +23,18 @@ weight = 30
 This website is powered by [Academic](https://github.com/gcushen/hugo-academic), [Hugo](https://gohugo.io), and [Netlify](https://www.netlify.com/), and can be built in **under 10 minutes**.
 
 <div style="text-align: center;">
-  <a class="btn btn-intro btn-lg" href="./docs/">Get Started!</a>
+  <a class="btn btn-intro btn-lg" href="/academic/docs/">Get Started!</a>
 </div>
 
-Explore the [demo](https://themes.gohugo.io/theme/academic/) and head on over to the [Docs](./docs/) section for the latest documentation.
+Explore the [demo](https://themes.gohugo.io/theme/academic/) and head on over to the [Docs](/academic/docs/) section for the latest documentation.
 
 If you like Academic, [_star_ it on Github](https://github.com/gcushen/hugo-academic) to show your support and keep track of updates :smiley:
 
 Key features:
 
 - Easily manage your content including homepage, blog posts, publications, talks, and projects
-- Configurable [widgets](./widgets/) available
-- Customize your site with [themes](./themes/)
+- Configurable [widgets](/academic/widgets/) available
+- Customize your site with [themes](/academic/themes/)
 - Can't find the widget you want? Use the Custom widget!
 - Write in [Markdown]({{< ref "docs/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
