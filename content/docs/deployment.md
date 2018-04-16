@@ -54,7 +54,7 @@ Whilst running the above commands you may be prompted for your Github username a
 
 Next, **regenerate** your website's HTML code by running Hugo and uploading the *public* submodule to GitHub:
 
-    hugo --cleanDestinationDir
+    hugo
     cd public
     git add .
     git commit -m "Build website"
