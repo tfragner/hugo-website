@@ -52,9 +52,13 @@ A general image:
 
     ![alternative text for search engines](/img/screenshot.png)
 
+An unnumbered figure with caption:
+
+    {{</* figure src="/img/screenshot.png" title="Caption" */>}}
+
 A numbered figure with caption:
 
-    {{</* figure src="/img/screenshot.png" title="Figure Caption" */>}}
+    {{</* figure src="/img/screenshot.png" title="Caption" numbered="true" */>}}
 
 ## Image gallery
 
@@ -74,6 +78,22 @@ To add an image gallery to a page:
     caption = "Dark theme"
     ```
 3. Display the gallery somewhere within your page content by using `{{</* gallery album="1" */>}}`
+
+## Videos
+
+The following kinds of video may be added to a page.
+
+**Local video** file - place a video in your `static/img/` folder and reference it using the form:
+
+    {{</* video src="my_video.mp4" controls="yes" */>}}
+
+**Youtube**:
+
+    {{</* youtube w7Ft2ymGmfc */>}}
+
+**Vimeo**:
+
+    {{</* vimeo 146022717 */>}}
 
 ## Links
 
@@ -103,6 +123,12 @@ I :heart: Academic :smile:
 
 > This is a blockquote.
 
+## Highlight quote
+
+    This is a {{</* hl */>}}highlighted quote{{</* /hl */>}}.
+
+This is a {{< hl >}}highlighted quote{{< /hl >}}.
+
 ## Footnotes
 
     I have more [^1] to say.
@@ -111,6 +137,18 @@ I :heart: Academic :smile:
 
 I have more [^1] to say.
 [^1]: Footnote example.
+
+## Embed Documents
+
+The following kinds of document may be embedded into a page.
+
+To embed **Google Documents** (e.g. slide deck), click the *Share* button in the top right corner of Google Docs and copy the link. Then paste the share link in the form:
+
+    {{</* gdocs "https://..." */>}}
+
+**Speaker Deck**:
+
+    {{</* speakerdeck 4e8126e72d853c0060001f97 */>}}
 
 ## Code highlighting
 
@@ -189,21 +227,9 @@ To include a single tweet, pass the tweet’s ID from the tweet's URL as paramet
 
     {{</* tweet 666616452582129664 */>}}
 
-## Youtube
-
-    {{</* youtube w7Ft2ymGmfc */>}}
-
-## Vimeo
-
-    {{</* vimeo 146022717 */>}}
-
 ## GitHub gist
 
     {{</* gist USERNAME GIST-ID  */>}}
-
-## Speaker Deck
-
-    {{</* speakerdeck 4e8126e72d853c0060001f97 */>}}
 
 ## $\rm \LaTeX$ math
 
