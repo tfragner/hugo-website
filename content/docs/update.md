@@ -10,7 +10,7 @@ draft = false
     weight = 50
 +++
 
-Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](../../updates) prior to updating your site.
+Feel free to *star* the project on [Github](https://github.com/gcushen/hugo-academic/) to help keep track of updates and check out the [release notes](/academic/updates/) prior to updating your site.
 
 Before updating the framework, it is recommended to make a backup of your entire website directory (or at least your `themes/academic` directory) and record your current version number.
 
@@ -47,7 +47,7 @@ Uninstall your current version of Academic by deleting the contents of `themes/a
 
 ## Troubleshooting
 
-Check out the [release notes](../../updates) for the version that you are updating to, paying attention to the breaking changes.
+Check out the [release notes](/academic/updates/) for the version that you are updating to, paying attention to the breaking changes.
 
 If there are any issues after updating, you may wish to compare your site with the latest [example site](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) to check if any settings changed in `config.toml` or the `+++` front matter of content files.
 
