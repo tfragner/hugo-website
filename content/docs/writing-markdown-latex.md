@@ -109,6 +109,10 @@ To enable linking to a file, such as a PDF, first place the file in your `static
 
 The optional `"newtab"` argument for `staticref` will cause the link to be opened in a new tab.
 
+### Tags and Categories
+
+Use `{{</* list_tags */>}}` to provide a list of linked tags or `{{</* list_categories */>}}` to provide a list of linked categories.
+
 ## Emojis
 
 See the [Emoji cheat sheet](http://www.webpagefx.com/tools/emoji-cheat-sheet/) for available emoticons. The following serves as an example, but you should remove the spaces between each emoji name and pair of semicolons:
@@ -142,9 +146,9 @@ I have more [^1] to say.
 
 The following kinds of document may be embedded into a page.
 
-To embed **Google Documents** (e.g. slide deck), click the *Share* button in the top right corner of Google Docs and copy the link. Then paste the share link in the form:
+To embed **Google Documents** (e.g. slide deck), click *File > Publish to web > Embed* in Google Docs and copy the URL within the displayed `src="..."` attribute. Then paste the URL in the form:
 
-    {{</* gdocs "https://..." */>}}
+    {{</* gdocs src="https://docs.google.com/..." */>}}
 
 **Speaker Deck**:
 
