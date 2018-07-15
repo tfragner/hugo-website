@@ -65,3 +65,33 @@ Hugo uses a [template lookup](https://gohugo.io/templates/lookup-order/) which e
 To override a template in the theme, you simply copy the file you are interested in from `themes/academic/` and paste it in your site folder using a similar path. To understand how this works, you should familiarize yourself with template lookup. Finally, when you update Academic, remember to compare your version of the file against Academic's one, in case you need to propagate any changes across.
 
 For example, say we wish to add some HTML code to the navigation bar. Let's copy the relevant file `themes/academic/layout/partials/navbar.html` to `layout/partials/navbar.html` (at the root of your site, **not** in `themes/academic/`), creating the `layout/partials/` folders if they do not already exist. Now you can add the HTML code you want to your copy of the file, which will override Academic's version.
+
+## Date Format
+
+Academic uses the following constants to format dates and times:
+
+| Type     | Options |
+|----------|--------------------------------------------------------------------------------------------------|
+| Year     | `06`   `2006` |
+| Month    | `01`   `1`   `Jan`   `January` |
+| Day      | `02`   `2`   `_2` <span style="font-size:90%;">(width two, right justified)</span> |
+| Weekday  | `Mon`   `Monday` |
+| Hours    | `03`   `3`   `15` |
+| Minutes  | `04`   `4` |
+| Seconds  | `05`   `5` |
+| AM/PM    | `PM`   `pm` |
+| Timezone | `MST` |
+| Offset   | `-0700`   `-07`   `-07:00`   `Z0700`   `Z07:00` |
+
+To modify the format, edit `date_format` and `time_format` in `config.toml` using the above constants. For example, some common formats are:
+
+| Format                            | Type              |
+|-----------------------------------|-------------------|
+| `January 2, 2006`                 | Date              |
+| `01/02/06`                        |                   |
+| `Jan-02-06`                       |                   |
+| `Mon, 02 Jan 2006`                |                   |
+| `Monday, 02 Jan 2006`             |                   |
+| `15:04`                           | Time              |
+| `3:04 PM`                         |                   |
+| `15:04 MST`                       |                   |
