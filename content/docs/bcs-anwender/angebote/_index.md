@@ -1,5 +1,5 @@
 +++
-title = "Documentation"
+title = "BCS Angebote"
 date = 2017-11-19
 
 math = false
@@ -9,4 +9,9 @@ highlight = false
 [header]
 image = ""
 caption = ""
+[menu.docs]
+  name = "BCS Angebote"
+  identifier = "angebote"
+  parent = "bcs-anwender"
+  weight = 10
 +++

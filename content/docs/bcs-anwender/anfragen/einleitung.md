@@ -1,5 +1,5 @@
 +++
-title = "Documentation"
+title = "BCS Anfragen - Einleitung"
 date = 2017-11-19
 
 math = false
@@ -9,4 +9,8 @@ highlight = false
 [header]
 image = ""
 caption = ""
+[menu.docs]
+  name = "BCS Anfragen - Einleitung"
+  parent = "anfragen"
+  weight = 10
 +++

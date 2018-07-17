@@ -1,5 +1,5 @@
 +++
-title = "Documentation"
+title = "BCS Documentation - Administration"
 date = 2017-11-19
 
 math = false
@@ -9,4 +9,7 @@ highlight = false
 [header]
 image = ""
 caption = ""
+[menu.docs]
+  identifier = "bcs-administration"
+  weight = 10
 +++
