@@ -2,18 +2,19 @@
 {{ partial "navbar.html" . }}
 {{ $current_page := . }}
 
+
 <div class="container body-content docs">
   <div class="row">
 
-      <nav id="docs-navbar" class="docs-nav visible-md visible-lg affix">
-          {{ partial "menu_include.html" . }} 
+    <nav id="docs-navbar" class="docs-nav visible-md visible-lg affix">
+        {{ partial "menu_include.html" . }} 
+    </nav>
+
+    <div class="col-md-2">
+      <nav id="small-nav" class="docs-nav hidden-md hidden-lg">
+          {{ partial "menu_include.html" . }}
       </nav>
-  
-      <div class="col-md-2">
-        <nav id="small-nav" class="docs-nav hidden-md hidden-lg">
-            {{ partial "menu_include.html" . }}
-        </nav>
-      </div>
+    </div>
 
     <div class="col-sm-9 col-md-8 body">
 
@@ -30,7 +31,7 @@
               </a>
             </div>
 
-            <!--<h1 itemprop="name">{{ .Title }}</h1>-->
+            <h1 itemprop="name">{{ .Title }}</h1>
 
             <div class="article-style" itemprop="articleBody">
               {{ .Content }}
