@@ -36,8 +36,11 @@
             <div class="article-style" itemprop="articleBody">
               {{ .Content }}
             </div>
-
-            {{ partial "tags.html" . }}
+            <div class="space-below"></div>
+            {{ partial "publication_links_section" (dict "content" . "is_list" 0) }}
+            <div class="space-below"></div>
+            {{ partial "tags_section.html" . }}
+            <div class="space-below"></div>
           </div>
         </div>
 

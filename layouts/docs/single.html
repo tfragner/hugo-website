@@ -32,11 +32,15 @@
 
             <!--<h1 itemprop="name">{{ .Title }}</h1>-->
 
+    <div class="visible-xs space-below"></div>
             <div class="article-style" itemprop="articleBody">
               {{ .Content }}
             </div>
-
+            <div class="space-below"></div>
+            {{ partial "publication_links" (dict "content" . "is_list" 0) }}
+            <div class="space-below"></div>
             {{ partial "tags.html" . }}
+            <div class="space-below"></div>
           </div>
         </div>
 
