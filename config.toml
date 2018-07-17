@@ -257,10 +257,10 @@ enableGitInfo = true
   url = "docs/"
   weight = 10
 
-[[menu.main]]
-  name = "Updates"
-  url = "updates/"
-  weight = 20
+#[[menu.main]]
+#  name = "Updates"
+#  url = "updates/"
+#  weight = 20
 
 [[menu.main]]
   name = "Themes"
