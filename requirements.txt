@@ -1,0 +1,8 @@
+future==0.16.0
+pandoc-fignos==1.2.0
+pandoc-xnos==1.0.1
+pandocfilters==1.4.2
+panflute==1.10.6
+psutil==5.4.6
+PyYAML==3.13
+shutilwhich==1.1.0
