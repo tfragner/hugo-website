@@ -279,41 +279,10 @@ enableGitInfo = true
   weight = 50
 
 # Documentation menu.
-
 [[menu.docs]]
   name = "Overview"
-  weight = 5
-  url = "/docs/"
-
-[[menu.docs]]
-  name = "Setup"
   weight = 10
-  identifier = "setup"
-
-[[menu.docs]]
-  name = "Your Content"
-  weight = 20
-  identifier = "content"
-
-[[menu.docs]]
-  name = "Deployment"
-  weight = 30
-  identifier = "deploy"
-
-[[menu.docs]]
-  name = "Migrate"
-  identifier = "migrate"
-  weight = 40
-
-[[menu.docs]]
-  name = "Contributing"
-  url = "/docs/contribute/"
-  weight = 50
-
-[[menu.docs]]
-  name = "Troubleshooting"
-  weight = 60
-  url = "/docs/faq/"
+  url = "/docs/"
 
 # Taxonomies.
 [taxonomies]
