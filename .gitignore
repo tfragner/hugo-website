@@ -1,2 +1,5 @@
 public/
 .idea/
+venv/
+content/**/*.pdf
+content/**/*.html
