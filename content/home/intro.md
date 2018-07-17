@@ -36,7 +36,7 @@ Key features:
 - Configurable [widgets](/academic/widgets/) available
 - Customize your site with [themes](/academic/themes/)
 - Can't find the widget you want? Use the Custom widget!
-- Write in [Markdown]({{< ref "docs/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
+- Write in ... for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Make it your own by installing color themes
 - Responsive and mobile friendly
