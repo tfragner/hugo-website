@@ -1,0 +1,229 @@
+---
+title: Technische Grundlagen
+author: Stefan Oppl
+date: \today
+
+url_custom: 
+    - name: CE Institute
+      url: http://jku.at
+menu:
+    docs:
+        parent: ce-vl
+        weight: 20
+tags:
+    - CE
+    - Hugo
+url_pdf: pdf/chapter_02.pdf
+url_video: https://www.youtube.com/watch?v=BNsrK6P9QvI
+
+---
+
+# Technische Grundlagen
+
+Dieser den eigentlichen themenspezifischen Inhalten vorgelagerte Abschnitt dieses Skriptums behandelt die grundlegenden Prinzipien des Communications Engineering, die über alle Themenbereiche hinweg immer wieder zur Anwendung kommen. Er führt die notwendigen Grundbegriffe ein und ermöglicht so eine eindeutige Diskussion der Eigenschaften der Technologien und Methoden, die im übrigen Skriptum dargestellt werden.
+
+**Überblick & Behandelte Themen**
+
+Organisationen sind steter Entwicklung unterworfen. Kurze Technologiezyklen und sich häufig ändernde Anforderungen an Kommunikations- und Informationssysteme bestimmen das Handlungsfeld von EntwicklerInnen. Durch die technische Entwicklung der letzten Jahrzehnte ist eine Infrastruktur entstanden, die vernetzte Anwendungen ermöglicht, in denen eine Vielzahl von Computersystemen verbunden ist und über Nachrichten on-demand kommuniziert.
+
+Die Gestaltung derartiger Anwendungen ist nicht trivial und bedarf einer umfassenderen Auseinandersetzung mit den technischen Grundlagen vernetzter Computersysteme, den bei der Entwicklung zu berücksichtigenden Gestaltungskriterien und den sozialen und organisationalen Implikationen des Technologie-Einsatzes.
+
+In diesem Abschnitt wird die Grundlage für diese Auseinandersetzung gelegt, indem dargestellt wird, was verteilte Systeme ausmacht, welche Gestaltungsprinzipien zur Anwendung kommen und wie sich diese im Allgemeinen auf die Konzeption verteilter Systeme auswirken.
+
+Abbildung @fig:description gibt einen Überblick über die behandelten Inhalte. Sie ist als Detaillierung der zughörigen Übersichtsgrafik in der Einleitung zu verstehen.
+
+\clearpage
+
+![Überblick "Grundlagen"](bild_001.jpeg){#fig:description width=500px}
+
+## Verteilte Systeme
+
+Ein verteiltes System ist ein Zusammenschluss unabhängiger Computer, die sich für den Benutzer als ein einziges System präsentieren.
+
+Ein verteiltes System besteht aus Komponenten (also Computersystemen), die autonom sind. Die BenutzerInnen bzw. nutzenden Programme nehmen ein verteiltes System als einziges technisches System wahr. Die autonomen Komponenten müssen also nahtlos zusammenarbeiten. Wie diese Zusammenarbeit eingerichtet wird, ist die Kernaufgabe der Entwicklung verteilter Systeme. Dabei wird keine Annahme über die Art der Computer(systeme) getroffen. Grundsätzlich können diese von hochleistungsfähigen Computern bis hin zu kleinen Knoten in Sensornetzen reichen. Genauso werden keine Annahmen darüber getroffen, wie diese Computer miteinander verbunden sind.
+
+Mit verteilten Systemen kann eine echte Nebenläufigkeit realisiert werden; das heißt, dass mehrere Prozesse zur gleichen Zeit ausgeführt werden können. Darüber hinaus ist ein verteiltes System auch besser skalierbar als ein einzelner Computer, da man auf einfache Art durch Hinzufügen weiterer Rechner die Leistungsfähigkeit erhöhen kann.
+
+Ein häufig anzutreffendes Szenario ist die Bereitstellung von entfernten Ressourcen. Außerdem werden verteilte Systeme zur Erhöhung der Ausfallsicherheit benutzt, indem bestimmte Funktionalitäten von mehreren Rechnern angeboten werden (Redundanz), so dass beim Ausfall die gleiche Funktionalität von einem weiteren Rechner angeboten wird.
+
+In vielen Fällen gibt es auch wirtschaftliche Gründe für den Einsatz verteilter Systeme, etwa wenn eine rechenintensive Aufgabe durch die Vernetzung preisgünstiger Rechner gelöst wird.
+
+Für den Benutzer sowie für die Applikation eines verteilten Systems ist die Art der Verteilung nicht relevant und idealerweise auch nicht ersichtlich. Das System verhält sich transparent (i.S.v. durchsichtig), als hätte der Nutzer es mit einem Gesamtsystem zu tun.
+
+## Gestaltungsprinzipien verteilter Systeme
+
+Beim Design verteilter Systeme werden zwei grundlegenden Gestaltungsprinzipien verfolgt, die jeweils in unterschiedlichen Ausprägungen auftreten können:
+
+- Skalierbarkeit, d.h. die Anpassung eines Systems bzw. dessen Leistungsfähigkeit an geänderte Rahmenbedingungen
+- Transparenz, d.h. das Verbergen der Komplexität eines verteilten Systems gegenüber nutzenden Personen oder technischen Komponenten
+
+### Skalierbarkeit
+
+Unter Skalierbarkeit versteht man die Fähigkeit eines Systems aus Hard- und Software, die Leistung durch das Hinzufügen von Ressourcen – z. B. weiterer Hardware – in einem definierten Bereich proportional (bzw. linear) zu steigern.
+
+Man kann die Leistung eines Systems auf zwei verschiedene Arten steigern:
+
+- Vertikale Skalierung (scale up)
+- Horizontale Skalierung (scale out)
+
+#### Vertikale Skalierung
+
+Unter vertikaler Skalierung versteht man ein Steigern der Leistung durch das Hinzufügen von Ressourcen zu einem Knoten/Rechner des Systems. Beispiele dafür wären das Vergrößern von Speicherplatz oder das Hinzufügen eines Rechners zum einem verteilten System.
+
+Charakteristisch für diese Art von Skalierung ist, dass ein System unabhängig von der Implementierung der Software schneller gemacht werden kann. Das heißt, es muss keine Zeile Code geändert werden, um eine Leistungssteigerung durch vertikales Skalieren zu erfahren. Der große Nachteil dabei ist jedoch, dass man früher oder später auf ein Limit stößt, bei dem man den Rechner nicht mehr aufrüsten kann, wenn man bereits die beste Hardware verwendet, die zu diesem Zeitpunkt am Markt ist.
+
+#### Horizontale Skalierung (scale out)
+
+Im Gegensatz zur vertikalen Skalierung sind der horizontalen Skalierung keine Grenzen (aus Sicht der Hardware) gesetzt. Horizontale Skalierung bedeutet die Steigerung der Leistung eines Systems durch das Hinzufügen zusätzlicher Rechner/Knoten. Die Effizienz dieser Art der Skalierung ist jedoch stark von der Implementierung der Software abhängig, da nicht jede Software gleich gut parallelisierbar ist. Wenn im Bezug auf verteilte Systeme von Skalierbarkeit gesprochen wird, ist üblicherweise horizontale Skalierung gemeint.
+
+#### Arten von Skalierbarkeit
+
+Grundsätzlich unterscheidet man vier Arten von Skalierbarkeit:
+
+- Lastskalierbarkeit
+- Räumliche Skalierbarkeit
+- Zeitlich-räumliche Skalierbarkeit
+- Strukturelle Skalierbarkeit
+
+Lastskalierbarkeit steht für ein konstantes Systemverhalten über größere Lastbereiche hinweg. Das bedeutet, dass ein System zum einen sowohl bei geringer, mittlerer, als auch bei hoher Last keine zu große Verzögerung aufweist und die Anfragen rasch abgearbeitet werden können.
+
+Räumliche Skalierbarkeit weist ein System bzw. eine Anwendung auf, wenn der Speicherbedarf bei einer wachsenden Anzahl an zu verwaltenden Elementen nicht inakzeptabel hoch ansteigt. Nachdem „inakzeptabel“ ein relativer Begriff ist, spricht man in diesem Zusammenhang in der Regel von akzeptabel, wenn der Speicherbedarf höchstens sub-linear ansteigt. Um das zu erreichen, kann z. B. Datenkompression angewendet werden. Nachdem Datenkompression eine gewisse Zeit beansprucht, steht diese jedoch häufig in Widerspruch zur Lastskalierbarkeit.
+
+Ein System verfügt über eine zeitlich-räumliche Skalierbarkeit, wenn sich das Erhöhen der Anzahl von Objekten die ein System umfasst, nicht erheblich auf dessen Performance auswirkt. Beispielsweise weist eine Suchmaschine mit linearer Komplexität keine zeitlich-räumliche Skalierbarkeit auf, während eine Suchmaschine mit indizierten, bzw. sortierten Daten, z. B. unter Verwendung einer Hashtabelle oder eines balancierten Baums, sehr wohl eine zeitlich-räumliche Skalierbarkeit vorweisen könnte.
+
+Strukturelle Skalierbarkeit zeichnet ein System aus, dessen Implementierung das Erhöhen der Anzahl von Objekten innerhalb eines selbst definierten Bereichs nicht maßgeblich behindert.
+
+Nachdem ein System natürlich mehrere Arten von Skalierbarkeit aufweisen kann, stellt sich die Frage, wie und ob diese miteinander zusammenhängen.
+
+Die Lastskalierbarkeit eines Systems wird nicht zwangsläufig durch eine schlechte räumliche, oder strukturelle Skalierbarkeit negativ beeinflusst. Systeme mit schlechter räumlicher oder zeitlich-räumlicher Skalierbarkeit haben, aufgrund des Overheads an Speicherverwaltung bzw. des hohen Suchaufwands, möglicherweise auch eine schlechte Lastskalierbarkeit. Systeme mit guter zeitlich-räumlicher Skalierbarkeit haben unter Umständen eine schlechte Lastskalierbarkeit, wenn z. B. nicht ausreichend parallelisiert wurde.
+
+### Transparenz
+
+Unter Transparenz versteht man, dass ein bestimmter Teil eines Systems zwar vorhanden und in Betrieb, aber ansonsten „unsichtbar“ ist und daher vom Benutzer nicht als vorhanden wahrgenommen wird. Allerdings wird im Kontext von IT-Sicherheit und Datenschutz der Begriff teilweise genau gegenteilig verwendet. Ein transparentes System ist nach diesem Verständnis eines, bei dem der Nutzer genau erfahren kann, welche Operation wie von wem und wo (z. B. im Ausland) ausgeführt wird.
+
+Im Kontext verteilter Systeme spricht man z. B. von einem transparenten Proxyserver, wenn dieser nicht explizit vom Benutzer angegeben werden muss, sondern ohne sein Zutun und somit ohne erkennbar zu sein, seinen Aufgaben nachkommt. Auch ist z. B. der Transport von Telefongesprächen durch die weltweiten Daten- und Telefonnetze für den Endkunden weitgehend transparent, da er im Regelfall nicht feststellen kann und es für ihn nicht wichtig ist, ob sein Gespräch über Satelliten, Unterseekabel, Richtfunk oder herkömmliche Telefonkabel übertragen wird.
+
+#### Arten von Transparenz
+
+Man unterscheidet unterschiedliche Arten von Transparenz:
+
+- Ortstransparenz (Positionstransparenz): Der Ort, an dem sich ein Dienst oder eine Ressource befindet ist dem Benutzer nicht bekannt. Der Zugriff erfolgt über einen bestimmten Namen, der allerdings keine Ortsinformationen enthält.
+- Zugriffstransparenz: Der Zugriff auf die Ressource erfolgt immer auf die gleiche Art und Weise, egal ob diese sich lokal oder entfernt im Netz befindet.
+- Persistierungstransparenz: Der Benutzer braucht nicht zwischen persistenten und transienten Daten zu unterscheiden. Explizites Abspeichern bzw. Öffnen von Dateien entfällt somit.
+- Nebenläufigkeitstransparenz: Es ist mehreren Benutzern möglich, gleichzeitig auf die Dienste und Ressourcen zuzugreifen. Das System sorgt dafür, dass exklusive Zugriffe möglich sind, und Daten ggf. synchronisiert bzw. repliziert werden.
+- Skalierungstransparenz: Das System soll flexibel bei der Erweiterung oder dem Austausch von Komponenten sein. Systempflege oder Erweiterung soll ohne Ausfall möglich sein.
+- Migrationstransparenz: Das Verschieben von Objekten im Verteilten System soll für den Benutzer und die Anwendungen unbemerkt geschehen.
+- Prozesstransparenz: Programme können beliebig zwischen den Knoten des Verteilten Systems verschoben werden. Idealerweise sorgt das System selbst für die Verschiebung von Prozessen auf weniger ausgelastete Knoten. Der Name und Ausführungsstatus eines Programmes darf sich dabei nicht ändern.
+- Leistungstransparenz: Den Benutzern steht die volle Leistung des Gesamtsystems zur Verfügung. Das System sorgt selbst dafür, dass die Aufgaben auf die verschiedenen Knoten optimal verteilt werden.
+- Replikationstransparenz: Aus Performancegründen kann es mehrere Kopien derselben Ressource geben. Das System sorgt für die transparente Replikation der darin vorgenommenen Änderungen.
+- Fragmentierungstransparenz: Die Teilbestandteile einer Ressource können an verschiedenen Orten gespeichert sein.
+- Fehler- und Ausfalltransparenz: Beim Ausfall eines Systems oder einer Netzwerkverbindung sollte der Anwender weiterarbeiten können, wenn auch mit verminderter Leistung.
+- Sprachtransparenz: Die Kommunikation zwischen den Komponenten ist unabhängig von der jeweils verwendeten Programmiersprache.
+- Parallelitätstransparenz: Aktivitäten können parallel ablaufen, ohne sich zu stören.
+
+## Schichtenarchitekturen
+Die Schichtenarchitektur ist ein häufig angewandtes Strukturierungsprinzip für die Architektur von Softwaresystemen im Allgemeinen und für verteilte Systeme im Speziellen. Dabei werden einzelne Aspekte des Softwaresystems konzeptionell einer Schicht (engl. tier oder layer) zugeordnet. Die erlaubten Abhängigkeitsbeziehungen zwischen den Aspekten werden bei einer Schichtenarchitektur dahingehend eingeschränkt, dass Aspekte einer „höheren“ Schicht nur solche „tieferer“ Schichten verwenden dürfen. Ein System mit Schichtenarchitektur bezeichnet man auch als mehrschichtig.
+
+Die den Schichten zugeordneten Aspekte können dabei je nach Art des Systems oder Detaillierungsgrad der Betrachtung z. B. Funktionalitäten, Komponenten oder Klassen sein.
+
+### Klassifikationen
+
+Man unterscheidet verschiedene Arten eine Schichtenarchitektur zu gestalten:
+
+Bei einer strikten bzw. geschlossenen Schichtenarchitektur dürfen keine Schichten übersprungen werden und nur die nächstniedrigere Schicht aufgerufen werden. Es wird so eine hohe Flexibilität gewährleistet, da bei der Veränderung einer Schicht im schlimmsten Fall anliegende Schichten angepasst werden müssen (nicht jedoch das ganze System), die einzelnen Schichten sind somit auch leichter test- und wartbar.
+Bei einer nicht-strikten bzw. offenen Schichtenarchitektur darf eine Schicht jede beliebige untere Schicht aufrufen. Ein Vorteil ist, dass offene Systeme oft performanter sind als geschlossene, da die Daten nicht erst durch dazwischenliegende Layer "hindurchgeschleust" werden müssen. Dies führt dann jedoch zu einem höheren Grad der Kopplung der Schichten im Gegensatz zu der i.d.R. gewünschten nur lockeren Kopplung (engl. loose layering).
+Es existieren auch Systeme, in denen die einzelnen Schichten mit der darüber- und der darunterliegenden Schicht kommunizieren. Das bekannteste Beispiel hierfür ist das ISO/OSI-Modell (siehe Thema 1.2).
+
+### Vor- und Nachteile
+
+Durch eine Schichtenarchitektur wird die Komplexität der Abhängigkeiten innerhalb des Systems reduziert und somit eine geringere Kopplung bei gleichzeitig höherer Kohäsion der einzelnen Schichten erreicht. Insbesondere werden durch sie Zyklen im Abhängigkeitsgraphen vermieden. Dies hat Vorteile sowohl für das Verständnis als auch für die Wartung des Systems. Außerdem sind einzelne Schichten gut austauschbar ohne das ganze System verändern zu müssen.
+
+Ein Nachteil eines Schichtenmodells kann sein, dass die Ausführungsgeschwindigkeit der Applikation durch den zur Weiterleitung und Transformation von Daten über eine Schicht geschriebenen Codes reduziert wird. Dies ist insbesondere bei den Teilen der Applikation merklich der Fall, für die die Daten in tieferliegenden Schichten strukturell besser geeignet wären als in den Schichten, auf die sie zugreifen dürfen.
+
+### Schichtenarchitekturen nach Anzahl der Schichten
+
+Oftmals werden Schichtenarchitekturen nach der Anzahl der verwendeten Schichten unterteilt.
+
+#### Zwei-Schichten-Architektur
+
+Die zweischichtige Architektur (englisch: two tier architecture) besteht aus zwei Schichten. Da nur die höhere auf die niedrigere Schicht zugreifen darf, ist die niedrigere Schicht ein Dienstanbieter (engl. Server) der höheren. Man spricht daher auch oft von einer Client-Server-Architektur.
+
+Client-Server-Architekturen müssen nicht notwendigerweise mittels unterschiedlicher Rechner realisiert sein, vielmehr kann der Client auch als ein Software-Modul verstanden werden, das auf ein zweites Software-Modul auf demselben Rechner, meist innerhalb derselben Anwendung zugreift. Das in der Abbildung @fig:2schicht gegebene Beispiel greift jedoch auf eine rechnerseitige Client-Server-Architektur zurück.
+
+![2-schichtige Architektur](bild_002.jpeg){#fig:2schicht width=500px}
+
+Bei Architekturen, wie in der Abbildung gegeben, wird die Rechenkapazität weitestgehend auf die Client-Rechner ausgelagert, um den Server zu entlasten. Auf dem Server läuft eine Datenbankanwendung. Die Clients übernehmen dabei die Logik und die Darstellung der Benutzerschnittstelle.
+
+#### Drei-Schichten-Architektur
+
+Die dreischichtige Architektur (englisch: three tier architecture) ist eine Architektur, die softwareseitig drei Schichten hat. Im Gegensatz zur zweischichtigen Architektur existiert bei der dreischichtigen Architektur noch eine zusätzliche Schicht, oftmals die Logikschicht, welche die Datenverarbeitung vornimmt.
+
+![3-schichtige Architektur](bild_003.jpeg){#fig:3schicht width=500px}
+
+Eine typische Drei-Schichten-Architektur besteht aus den folgenden Schichten:
+
+- Präsentationsschicht (client tier) – Diese, auch Front-End bezeichnet, ist für die Repräsentation der Daten, Benutzereingaben und die Benutzerschnittstelle verantwortlich.
+- Logikschicht (application-server tier, Businessschicht, Middle Tier oder Enterprise Tier) – Sie beinhaltet alle Verarbeitungsmechanismen. Hier ist die Anwendungslogik vereint.
+- Datenhaltungsschicht (data-server tier, back end) – Sie enthält die Datenbank und ist verantwortlich für das Speichern und Laden von Daten.
+
+##### Drei-Schichten-Architekturen bei verteilten Systemen
+
+Mehrschichtige Systemarchitekturen wie die dreischichtige Architektur sind gut skalierbar, da die einzelnen Schichten logisch voneinander getrennt sind. So kann z. B. bei verteilten Systemarchitekturen die Datenschicht auf einem zentralen Datenbank-Server laufen, die Logikschicht auf Workgroup-Servern, und die Präsentationsschicht befindet sich auf der jeweiligen Workstation des Benutzers.
+
+![Verteilungsmöglichkeiten bei Schichtenarchitekturen](bild_004.jpeg){#fig:verteilungs width=500px}
+
+Wie Abbildung @fig:verteilungs zeigt, gibt es zwischen Client und Server verschiedene Möglichkeiten zur Verteilung der Schichten. Grundsätzlich gilt: Je höher (näher an der Präsentationsschicht) die Schicht ist, desto eher wird sie von einem Client bearbeitet. Je tiefer (näher an der Datenschicht) die Schicht ist, desto eher ist sie Aufgabe eines Servers.
+
+#### Drei-Schichten-Architekturen innerhalb von Software-Systemen
+
+Die 3-Tier-Architektur lässt sich auch innerhalb eines Software-Systems umsetzen, indem die Software-Module, welche für Präsentation, Anwendungslogik und persistente Speicherung von Daten zuständig sind, den einzelnen Schichten zugeordnet werden und gemäß der Schichteneinteilung voneinander entkoppelt werden. Neben einer Strukturierung gemäß dem Model View Controller-Architekturmuster gilt eine solche Drei-Schichten-Architektur üblicherweise als das Mindestmaß architektonischer Strukturierung, sofern keine zwingenden Gründe für andere Architekturentscheidungen vorliegen.
+
+### Typische Schichten innerhalb einer mehrschichtigen Architektur
+
+#### Präsentationsschicht
+
+Die Präsentationsschicht (engl. client layer oder presentation layer) ist für die Darstellung und Entgegennahme von der Software bearbeiteten Daten, sowie der von der Software bereitgestellten Funktionen verantwortlich.
+
+Bei verteilten Systemen existieren für die Darstellung der Inhalte zwei Alternativen:
+
+- Man setzt auf den Webbrowser als Thin Client und stellt die Inhalte und Formulare in XHTML, XML, JavaScript und anderen für das World Wide Web geschaffenen Sprachen dar, nutzt also eine klassische „Webanwendung“. Die Kommunikation mit tieferen Schichten erfolgt normalerweise über HTTP.
+- Man produziert eine eigene grafische Benutzeroberfläche als Fat-Client. Dieser nutzt die erweiterten Darstellungsmöglichkeiten der dafür verwendeten Programmiersprache bzw. Grafikbibliothek wie Flash, Java Swing oder XAML. Dieser kommuniziert mit der Anwendungsschicht über Netzwerkprotokolle wie SOAP (siehe später).
+
+#### Logikschicht
+
+Die Logikschicht lässt sich intern in die Steuerungsschicht und die eigentliche Geschäftslogikschicht unterteilen. Die Steuerungsschicht (engl. process layer) dient der Koordination mehrerer fachlich abgegrenzter Teile der Geschäftslogikschicht, es erfolgt hier die Orchestrierung der einzelnen Komponenten. In der Steuerungsschicht liegt häufig auch die Verantwortung für die Transaktionssteuerung.
+
+Die Geschäftslogikschicht (auch Verarbeitungsschicht, Anwendungslogikschicht, Domänenschicht, application layer oder middle tier) realisiert das eigentliche Geschäftsmodell, indem die am Geschäftsmodell beteiligten Geschäftsobjekte mit der zugehörigen Logik implementiert werden.
+
+#### Datenzugriffsschicht
+
+Die Datenzugriffsschicht kapselt den Zugriff auf persistente Daten und die dabei verwendeten Techniken.
+
+Für die persistente Speicherung werden häufig Datenbanken eingesetzt, bei anderen Systemen können aber auch normale Dateien verwendet werden.
+
+Beim Einsatz von Datenbanken werden für den Datenaustausch mit der Datenhaltungsschicht Datenbankschnittstellen sowie alternativ der direkte Zugriff auf das DBMS (Datenbank Management System) verwendet. Bei Verwendung von objektorientierter Programmierung im Zusammenspiel mit einem relationalen DBMS wird in der Datenzugriffsschicht eine objektrelationale Abbildung (object-relational mapping, ORM) durchgeführt. Diese zusätzliche Abstraktion macht die eigentliche Datenhaltung wiederum einfach austauschbar, ohne die gesamte Applikation ändern zu müssen.
+
+## Das Reaktive Manifest
+
+In unterschiedlichen Zweigen der Softwareindustrie stoßen Organisationen und Entwickler auf wiederkehrende Muster in den Anforderungen und der Implementierung moderner Systeme. Um den heutigen Ansprüchen zu genügen, müssen diese robuster und anpassungsfähiger sein, als es früher der Fall war. Dieser Wandel ist bedingt durch das rapide wachsende technische und soziale Ausmaß der Verwendung von Computersystemen in unserer Gesellschaft.
+
+Bestanden große Anwendungen vor wenigen Jahren noch aus Dutzenden von Servern, die Antwortzeiten im Sekundenbereich lieferten, regelmäßig für Stunden gewartet wurden und Daten in der Größenordnung von Gigabytes verarbeiteten, so umfassen sie heute Tausende von Vielkernprozessoren, verteilt auf mobile Endgeräte und in der Cloud. Benutzer erwarten Antwortzeiten im Bereich von Millisekunden und ständige Verfügbarkeit, die Datenmenge bemisst sich in Petabytes.
+
+Wir glauben, dass die Anforderungen, die heute an Computersysteme gestellt werden, nur zu erfüllen sind durch die gleichzeitige Ausrichtung an vier Qualitäten, deren Wert bislang nur einzeln betrachtet wurde: Systeme müssen stets antwortbereit, widerstandsfähig, elastisch und nachrichtenorientiert sein. Dann nennen wir sie reaktive Systeme.
+
+Computersysteme, die nach diesen Anforderungen entwickelt werden, erweisen sich als anpassungsfähiger, mit weniger starr gekoppelten Komponenten und in jeder Hinsicht skalierbarer. Sie sind einfacher weiterzuentwickeln und zu verändern. Sie reagieren zuverlässiger und eleganter auf Fehler und vermeiden so desaströse Ausfälle. Reaktive Systeme bereiten dem Benutzer durch ihre fortwährende Antwortfreudigkeit eine interaktive und höchst befriedigende Erfahrung.
+
+Reaktive Systeme sind:
+
+- **Antwortbereit** (Englisch: responsive): Das System antwortet unter allen Umständen zeitgerecht, solange dies überhaupt möglich ist. Antwortbereitschaft ist die Grundlage für Funktion und Benutzbarkeit eines Systems, aber noch wichtiger ist, dass Fehler in verteilten Systemen nur durch die Abwesenheit einer Antwort sicher festgestellt werden können. Ohne vereinbarte Antwortzeitgrenzen ist die Erkennung und Behandlung von Fehlern nicht möglich. Eine weitere Facette ist, dass konsistente Antwortzeiten als Zeichen von Qualität Vertrauen stiften und so weitere Interaktion fördern.
+- **Widerstandsfähig** (English: resilient): Das System bleibt selbst bei Ausfällen von Hard- oder Software antwortbereit. Dies bezieht sich nicht nur auf hochkritische Anwendungen: jedes System, welches nicht widerstandsfähig ist, verliert durch einen Ausfall seine Antwortbereitschaft und damit seine Funktion. Widerstandsfähigkeit ist nur erreichbar durch Replizieren der Funktionalität, Eindämmung von Fehlern, Isolation von Komponenten sowie Delegieren von Verantwortung. So bleibt der Ausfall eines Teilsystems auf dieses begrenzt, andere Teilsysteme sind geschützt und in ihrer Funktion nicht behindert. Die Wiederherstellung des Normalzustandes wird einer übergeordneten Komponente übertragen, die durch die gesteuerte Replizierung der ihr untergeordneten Komponenten die geforderte Verfügbarkeit sicherstellt. All dies bedeutet, dass Nutzer eines auf diese Weise widerstandsfähigen Systems von der Last befreit sind, sich mit dessen Ausfällen auseinandersetzen zu müssen.
+- **Elastisch** (Englisch: elastic): Das System bleibt auch unter sich ändernden Lastbedingungen antwortbereit. Auch hier bildet die Verteilung und Replizierung von Funktionalität die Grundlage, auf der das System auf Veränderungen reagiert. Bei Verminderung oder Erhöhung der Last werden automatisch die Replizierungsfaktoren und damit die genutzten Ressourcen angepasst. Um dies zu ermöglichen, darf das System keine Engpässe aufweisen, die den Gesamtdurchsatz vor Erreichen der geplanten Maximalauslegung einschränken. Ideal ist eine Architektur, die keine fixen Engpässe aufweist. In diesem Fall kann das bearbeitete Aufgabengebiet in unabhängige Teile zerlegt und auf beliebig viele Ressourcen verteilt werden. Reaktive Systeme unterstützen die Erfassung ihrer Auslastung zur Laufzeit, um automatisch regelnd eingreifen zu können. Dank ihrer Elastizität können sie auf Speziallösungen verzichten und mit handelsüblichen Komponenten implementiert werden.
+- **Nachrichtenorientiert** (Englisch: message driven): Das System verwendet asynchrone Nachrichtenübermittlung zwischen seinen Komponenten zur Sicherstellung von deren Entkopplung und Isolation sowie zwecks Übermittlung von Fehlern an übergeordnete Komponenten. Die explizite Verwendung von Nachrichtenübermittlung führt zu einer ortsunabhängigen Formulierung des Programms und erlaubt die transparente Skalierung von Komponenten. Die Überwachung von Nachrichtenpuffern ermöglicht kontinuierlichen Einblick in das Laufzeitverhalten des Systems — sowohl zur Diagnose als auch zur automatischen Ressourcensteuerung — sowie Priorisierung und Kontrolle der Nachrichtenflüsse. Ortsunabhängigkeit bedeutet, dass Code und Semantik des Programms nicht davon abhängen, ob dessen Teile auf demselben Computer oder verteilt über ein Netzwerk ausgeführt werden. Nicht-blockierende nachrichtenorientierte Systeme erlauben eine effiziente Verwendung von Ressourcen, da Komponenten beim Ausbleiben von Nachrichten vollständig inaktiv bleiben können.
+
+Große Anwendungen bestehen stets aus mehreren Komponenten und sind daher abhängig von deren Reaktivität. Deshalb müssen die genannten vier reaktiven Qualitäten in der Architektur einer jeden Ebene des Gesamtsystems berücksichtigt werden, wodurch reaktive Systeme schichtweise komponierbar sind. Die größten Computersysteme der Welt basieren bereits auf diesen Prinzipien und dienen Milliarden von Menschen in deren täglichen Leben. Es ist an der Zeit, diesen Ansatz bewusst zu Grunde zu legen anstatt ihn in Teilen für jedes Projekt neu zu entdecken.
+
+## Fragen zur Selbstkontrolle
+- Nehmen Sie an, Sie nutzen mit ihren Studienkollegen einen mittels Dropbox geteilten Ordner, um Dokumente auszutauschen. In wie weit ist für diesen Ordner Replikationstransparenz und Zugriffstransparenz gegeben? Begründen Sie jeweils.
+- Nehmen Sie an, Sie haben eine Kommunikations-Plattform entwickelt, deren Nutzerbasis in den letzten Monaten stark gewachsen ist. Aus diesem Grund stößt der zentrale Rechner, der die Nachrichtenverarbeitung übernimmt, an seine Leistungsgrenzen. Sie buchen bei Ihrem Hosting-Anbieter deshalb eine leistungsfähigere Maschine. Handelt es sich hier um vertikale oder horizontale Skalierung? Warum?
+- Welche der folgenden Arten von Transparenz sind bei der Nutzung eines Netzwerkdruckers üblicherweise gegeben? Warum? Ortstransparenz, Zugriffstransparenz, Nebenläufigkeitstransparenz, Fehler- und Ausfalltransparenz
+- Erklären Sie, wie Schichtenarchitekturen zur Transparenz und Skalierbarkeit in verteilten Systemen beitragen. Geben Sie ein selbstgewähltes Beispiel an, das beide Eigenschaften zeigt.

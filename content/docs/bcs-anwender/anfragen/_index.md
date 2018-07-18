@@ -15,3 +15,7 @@ caption = ""
   parent = "bcs-anwender"
   weight = 10
 +++
+
+## Einleitung
+
+In den folgenden Kapiteln wird beschrieben wie Anfragen behandelt werden sollen.

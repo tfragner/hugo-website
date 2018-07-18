@@ -73,4 +73,72 @@
 </div>
 
 {{ partial "footer_container.html" . }}
+  <!-- viewer -->
+  <script src="/js/bpmn-navigated-viewer.production.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+  <!-- app -->
+  <script>
+      var console = document.querySelector('#js-console');
+    
+      function log() {
+        console.value += Array.prototype.slice.call(arguments).map(function (e) {
+          return String(e);
+        }).join(' ');
+    
+        console.value += '\n';
+        console.scrollTop = console.scrollHeight;
+      }
+    
+      // the diagram to display
+      // you may load it asynchronously via ajax, too
+    
+      var diagramUrl = 'http://localhost:1313/bpmn/test.bpmn';
+    
+      var bpmnViewer = new BpmnJS({
+        container: document.querySelector('#js-canvas'),
+        height: 400
+      });
+    
+      function openDiagram(bpmnXML) {
+    
+        // import diagram
+        bpmnViewer.importXML(bpmnXML, function (err) {
+    
+          if (err) {
+            return console.error('could not import BPMN 2.0 diagram', err);
+          }
+    
+          // access viewer components
+          var canvas = bpmnViewer.get('canvas');
+          // zoom to fit full viewport
+          canvas.zoom('fit-viewport');
+    
+          var eventBus = bpmnViewer.get('eventBus');
+    
+          var events = [
+            'element.hover',
+            'element.out',
+            'element.click',
+            'element.dblclick',
+            'element.mousedown',
+            'element.mouseup'
+          ];
+    
+          events.forEach(function (event) {
+    
+            eventBus.on(event, function (e) {
+              // e.element = the model element
+              // e.gfx = the graphical element
+    
+              log(event, 'on', e.element.id);
+            });
+          });
+    
+        });
+      }
+      $.get(diagramUrl, openDiagram, 'text');
+    </script>
+</html>
+
+
 {{ partial "footer.html" . }}

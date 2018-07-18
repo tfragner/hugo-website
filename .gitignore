@@ -4,3 +4,5 @@ venv/
 content/**/*.pdf
 content/**/*.html
 static/**/*.pdf
+node_modules/**
+bleve/**

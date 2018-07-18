@@ -1,0 +1,108 @@
+---
+title: Einleitung
+author: Stefan Oppl
+
+menu:
+    docs:
+        parent: ce-vl
+        weight: 10
+
+url_pdf: pdf/chapter_01.pdf
+---
+
+# Einleitung
+
+Das vorliegende Skriptum wurde zur Unterstützung des Moduls „Communications Engineering“ erstellt. Die Inhalte wurden so ausgewählt, dass sie die Grundlage zur Erreichung des im Folgenden formulierten Lernzieles bilden können:
+
+**AbsolventInnen des Moduls „Communications Engineering“ sind in Lage, Unterstützungssysteme für operative Arbeit in Unternehmen unter Berücksichtigung deren Aufbau- und Ablauforganisation zu konzipieren und deren technische Umsetzung auf Anwendungs- und Infrastruktur-Ebene anzuleiten.**
+
+Unterstützungssysteme sind hier nicht ausschließlich im technischen Sinne zu verstehen, sondern umfassen auch organisationale oder soziale Instrumente.
+
+Der Fokus auf operative Arbeit schränkt den Betrachtungsbereich des Moduls auf jene Systeme ein, die unmittelbar die Zielerreichung eines Unternehmens unterstützen. System zur Unterstützung von Managementprozessen (etwa Management-Informationssysteme) werden explizit nicht betrachtet.
+
+Das Modul fokussiert außerdem auf die Unterstützung von Arbeit in Unternehmen (also in einem formalisierten organisationalen Zusammenhang) und stellt den Anspruch, dass Unterstützungssysteme in die Aufbau- und Ablauforganisation des Unternehmens (also die Unternehmensstruktur und die Prozesse) eingebettet werden können bzw. aus diesen abgeleitet werden können.
+
+Die technische Umsetzung auf Anwendungs- und Infrastruktur-Ebene zu konzipieren und deren Umsetzung anzuleiten ist eine Kernkompetenz von WirtschaftsinformatikerInnen und steht dementsprechend im inhaltlichen Fokus aller Komponenten des Moduls.
+
+## Zusammenhänge mit anderen Lehrveranstaltungen
+
+Aufgrund des Fokus des Moduls “Communications Engineering” auf die Zusammenhänge zwischen den sozio-technischen Gestaltungselementen in Organisationen wird in deren Besprechung auf eine tiergehende, detaillierte Diskussion weitgehend verzichtet und jeweils ein Überblick über die relevanten Inhalte gegeben. Dies entbindet nicht von der Notwendigkeit, auch darüber hinausgehende und tiefergehende Inhalte zu erfassen, um in der Praxis korrekte Designentscheidungen treffen und deren Umsetzung anleiten zu können. In den einzelnen Kapiteln ist deshalb jeweils weiterführende Literatur zum Selbststudium angegeben. Im Kontext des Bachelorstudiums Wirtschaftsinformatik an der Johannes Kepler Universität Linz sind darüber hinaus mehrere Lehrveranstaltungen vorgesehen, die die notwendige Tiefe vermitteln und deren erfolgreiche Absolvierung das Verständnis des vorliegenden Skriptums verbessert.
+
+Im Einzelnen sind dies:
+
+- Einführung in die Wirtschaftsinformatik
+- Datenmodellierung
+- Prozess- und Kommunikationsmodellierung
+- Algorithmen und Datenstrukturen
+- Einführung in die Betriebswirtschaftslehre
+- Strategie
+- Softwareentwicklung 1 & 2
+- Software Engineering
+- Informationsmanagement
+
+## Struktur dieses Skriptums
+
+Folgende Kapitelstruktur leitet durch die Inhalte dieses Skriptums:
+
+- Technische Grundlagen
+- Themenbereich 1: Computernetzwerke
+- Themenbereich 2: Abstraktionsmodelle für verteilte Kommunikation zwischen technischen Systemen
+- Themenbereich 3: Enterprise Architecting
+- Themenbereich 4: Arbeitsgestaltung & -unterstützung
+
+Das Grundlagen-Kapitel führt in das Themengebiet verteilter Systeme ein, definiert die fundamentalen Begriffe und ordnet das Thema in die Wirtschaftsinformatik ein. Die folgenden Abschnitte widmen sich einzelnen Themenbereichen, die im Bereich des Communications Engineering relevant sind.
+
+## Innerer Aufbau der Themenbereiche
+
+Die Themenbereiche folgen einem einheitlichen inneren Aufbau, der die vermittelten Inhalte strukturiert aufbereiten und so zugänglicher machen soll.
+
+Jedes Kapitel folgt der folgenden Struktur:
+
+- Überblick
+- Thema 1
+    - Einführung
+    - Inhalte
+    - Fragen zu Selbstkontrolle
+- ...
+- Thema n
+- Integrative Fallstudie
+
+Der Überblick fasst die Inhalte der Themenbereiche zusammen und führt die einzelnen behandelten Themen ein. Aufgrund der Breite der Themenbereiche kann jeweils nur eine Auswahl an Themen behandelt werden. Deren Auswahl sowie deren Relevanz wird ebenfalls beschrieben. Zusätzlich ist relevante, weiterführende und tiefergehende Literatur angeführt. Bei der Behandlung der einzelnen Themen gibt ein Einführungs-Abschnitt einen ersten Überblick über das Thema, bevor die eigentlichen Inhalte beschrieben werden. Jedes Thema schließt mit einem Satz an Fragen zu Selbstkontrolle, deren Beantwortung bei erfolgreichem Studium des jeweiligen Themas möglich sein sollte. Jeder Themenbereich schließt mit einer Integrativen Fallstudie, deren Bearbeitung das Verständnis der Zusammenhänge zwischen den Themen stärken soll.
+
+## Zusammenhänge zwischen Themen
+
+Die Themen in den einzelnen Themenbereichen können grundsätzlich sequentiell konsumiert werden. Auch die Abfolge der Themenbereiche ist so konzipiert, dass die Inhalte sequentiell aufeinander aufbauen.
+
+Die tatsächlichen inhaltlichen Abhängigkeiten ergeben sich jedoch aus den unterschiedlichen Betrachtungsperspektiven, die auf Unternehmen eingenommen werden können. Hier kann strukturieren wir die Inhalte anhand zweier Systematiken: Einerseits können wir die Inhalte im Sinne eines sozio-technischen Systemverständnisses den Aspekten Mensch, Organisation und Technik und deren Berührungspunkte zuordnen. Andererseits befassen sich die Inhalte aus einer unternehmensorientierten Sichtweise mit der Unternehmensarchitektur, der Anwendungsarchitektur, der Technologiearchitektur oder wiederum mit deren Berührungspunkten. Im Folgenden wollen wir beide Strukturierungsmöglichkeiten betrachten.
+
+### Sozio-technische Sicht
+
+Als Wirtschaftsinformatiker beschäftigen wir uns zum einen mit der Konzeption von unternehmensunterstützenden Informationssystemen und der technischen Infrastruktur, die diese erst ermöglicht. Zum zweiten betrachten wir die Implikationen dieser technischen Systeme auf die organisationalen Strukturen und (vor allem) Abläufe des Unternehmens. Zum dritten manifestiert sich die Unterstützung von organisationalen Arbeitsabläufen immer an konkreten Unterstützungsmaßnahmen für MitarbeiterInnen und deren Kooperation. Berücksichtigt man diese drei Perspektiven bei der Gestaltung von Unterstützungsmaßnahmen, so spricht man von sozio-technischem Systemdesign.
+
+Zieht man diese drei Perspektiven wiederum zur Strukturierung dieses Skriptums heran, so zeigen sich die in der folgenden Abbildung @fig:description1 dargestellten Zusammenhänge. Pfeile stellen dabei inhaltliche Abhängigkeiten dar. Die Quelle eines Pfeils sollte deshalb vor dessen Ziel betrachtet werden. Die in den Pfeilen abgebildeten Beziehungen sind dabei transitiv zu verstehen [1].
+
+Die drei fett umrandeten Elemente, die keine eingehenden Pfeile aufweisen, stellen die Startpunkte für jede der Perspektiven dar. Elemente mit unterbrochener Rahmenlinie fokussieren auf die Entwicklung von Konzeptverständnis, während jene mit durchgezogener Rahmenlinie auf die Entwicklung von konkretem, handlungsbefähigendem Wissen fokussiert.
+
+\newpage
+
+![Überblick Grundlagen1](bild_000.jpeg){#fig:description1 width=500px}
+
+### Architektur-Sicht
+
+Wie eben beschrieben, ist die Aufgabe der Wirtschaftsinformatik die Konzeption von unternehmensunterstützenden Informationssystemen. Aus Unternehmenssicht ist es anstrebenswert, eine kohärente, mit der Unternehmensorganisation abgestimmte und die eigenen Geschäftsprozesse explizit unterstützende Informationssystem-Landschaft zu schaffen, die durch entsprechend konzipierte technische Infrastruktur ermöglicht wird. Um die Abstimmung zwischen den geschäftlichen und organisationalen Anforderungen des Unternehmens, der eingesetzten Informationssysteme und dazu notwendigen Infrastruktur zu ermöglichen und deren aktives Management zu unterstützen, bedient sich die Wirtschaftsinformatik des Konzeptes des Enterprise Architecture Management, dass eine strukturierte Betrachtung der drei beschriebenen Aspekte sowie deren Verknüpfung ermöglicht.
+
+Strukturiert man die Inhalte des Skriptums entlang dieser Aspekte, so ergibt sich ein hinsichtlich der technisch orientierten Inhalte ein differenzierteres Bild, das die Vermittlungs- und Schnittstellenfunktion von Software in verteilten organisationalen Informationssystemen betont.
+
+Die Semantik der Modellelemente in der folgenden Abbildung ist identisch mit der vorangegangenen. Die gekennzeichneten inhaltlichen Abhängigkeiten sind ebenfalls identisch. Zusätzlich ist aus der vertikalen Anordnung der Elemente abzulesen, ob ein Thema eher mit den Schnittstellen zweier Architekturebenen befasst (Anordnung nahe der Ebenengrenze) oder sich eher den Kernaspekten der jeweiligen Ebene zuzuordnen ist (Anordnung weiter von der Ebenengrenze entfernt).
+
+\newpage
+
+![Inhaltliche Zusammenhänge](bild_005.jpeg){#fig:description2 width=500px}
+
+## Lizenz
+
+Teile dieses Skriptums stammen aus der Wikipedia <http://de.wikipedia.org>, Stand 20. August 2016) und stehen unter der Lizenz „Creative Commons Attribution/Share Alike“ [2]. Sie wurden vom Autor inhaltlich geprüft, durch Kürzungen und Ergänzungen modifiziert und für den Druck aufbereitet. Sie dürfen diese modifizierten Versionen unter den Bedingungen dieser Lizenz benutzen. Die jeweiligen Quellen sind auf der Seite der jeweiligen Abschnittsüberschrift sowie in der Einführung zum jeweiligen Themenbereich angeführt.
+
+Jene Abschnitte, die nicht unter der oben genannten Lizenz stehen, sind im Skriptum durch Angabe des Lizenzstatus auf der Seite der jeweiligen Abschnittsüberschrift gekennzeichnet. Sie stammen aus wissenschaftlichen Publikationen und Lehrbüchern und wurden vom Autor inhaltlich geprüft, durch Kürzungen und Ergänzungen modifiziert und für den Druck aufbereitet. Sie dürfen in der vorliegenden Form ausschließlich im Rahmen der Lehrveranstaltung Communications Engineering verwendet werden.
+
+
